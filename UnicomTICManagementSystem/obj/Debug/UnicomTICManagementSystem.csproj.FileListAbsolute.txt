@@ -1,0 +1,54 @@
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\UnicomTICManagementSystem.exe.config
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\UnicomTICManagementSystem.exe
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\UnicomTICManagementSystem.pdb
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\System.Data.SQLite.dll
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\System.Data.SQLite.Linq.dll
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\System.Data.SQLite.xml
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.csproj.AssemblyReference.cache
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Form1.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Properties.Resources.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.csproj.GenerateResource.cache
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.csproj.CoreCompileInputs.cache
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTI.449BFD41.Up2Date
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.exe
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.pdb
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.loginform.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.sign_in.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.sign_up.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.AdminForm.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.LectureForm.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.TimetableForm.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.Staff_form.resources
+Z:\Programming Language\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.StudentForm2.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.csproj.AssemblyReference.cache
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Form1.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Properties.Resources.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.AdminForm.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.LectureAccessForm.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.Manage_Courses.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.Manage_lecturer.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.LoginForm.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.sign_in.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.sign_up.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.StaffAccessForm.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.Manage_staff.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.StudentAccessForm1.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.Manage_student.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.Manage_timetable.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.csproj.GenerateResource.cache
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.csproj.CoreCompileInputs.cache
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.exe
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.pdb
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\UnicomTICManagementSystem.exe.config
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\UnicomTICManagementSystem.exe
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\UnicomTICManagementSystem.pdb
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\System.Data.SQLite.dll
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\System.Data.SQLite.Linq.dll
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\bin\Debug\System.Data.SQLite.xml
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTI.449BFD41.Up2Date
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.Manage_Modules.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.ManageRooms.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.ManageMarks.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.ManageAttendance.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.ManageExams.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.StudentLecturerForm.resources

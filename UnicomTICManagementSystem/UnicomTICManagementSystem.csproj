@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FABD61A-C3E9-40B5-9A25-762EF29E2B88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UnicomTICManagementSystem</RootNamespace>
+    <AssemblyName>UnicomTICManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AttendanceController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\ExamController.cs" />
+    <Compile Include="Controllers\LectureController.cs" />
+    <Compile Include="Controllers\MarkController.cs" />
+    <Compile Include="Controllers\ModuleController.cs" />
+    <Compile Include="Controllers\Roomcontroller.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentLeccturer.cs" />
+    <Compile Include="Controllers\StudentLecturerController.cs" />
+    <Compile Include="Controllers\TimetableController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\LectureModule.cs" />
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\StudentLecturer.cs" />
+    <Compile Include="Models\StudentTimetable.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\DBConfig.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\Lecturer.cs" />
+    <Compile Include="Models\Mark.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\Timetable.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Migration.cs" />
+    <Compile Include="Services\SessionManager.cs" />
+    <Compile Include="Views\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LectureAccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LectureAccessForm.Designer.cs">
+      <DependentUpon>LectureAccessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manage Lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage Lecturer.Designer.cs">
+      <DependentUpon>Manage Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manage Courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage Courses.Designer.cs">
+      <DependentUpon>Manage Courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manage Modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage Modules.Designer.cs">
+      <DependentUpon>Manage Modules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageAttendance.Designer.cs">
+      <DependentUpon>ManageAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageExams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageExams.Designer.cs">
+      <DependentUpon>ManageExams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageMarks.Designer.cs">
+      <DependentUpon>ManageMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ManageRooms.Designer.cs">
+      <DependentUpon>ManageRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffAccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StaffAccessForm.Designer.cs">
+      <DependentUpon>StaffAccessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manage Staffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage Staffs.Designer.cs">
+      <DependentUpon>Manage Staffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentAccessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\.Designer.cs">
+      <DependentUpon>StudentAccessForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage Student.Designer.cs">
+      <DependentUpon>Manage Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manage Timetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Manage Timetable.Designer.cs">
+      <DependentUpon>Manage Timetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StudentLecturerForm.Designer.cs">
+      <DependentUpon>StudentLecturerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LectureAccessForm.resx">
+      <DependentUpon>LectureAccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage Courses.resx">
+      <DependentUpon>Manage Courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage Lecturer.resx">
+      <DependentUpon>Manage Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage Modules.resx">
+      <DependentUpon>Manage Modules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageAttendance.resx">
+      <DependentUpon>ManageAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageExams.resx">
+      <DependentUpon>ManageExams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageMarks.resx">
+      <DependentUpon>ManageMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManageRooms.resx">
+      <DependentUpon>ManageRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StaffAccessForm.resx">
+      <DependentUpon>StaffAccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage Staffs.resx">
+      <DependentUpon>Manage Staffs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentAccessForm.resx">
+      <DependentUpon>StudentAccessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage Student.resx">
+      <DependentUpon>Manage Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Manage Timetable.resx">
+      <DependentUpon>Manage Timetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentLecturerForm.resx">
+      <DependentUpon>StudentLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1699632566323.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16996325663231.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
