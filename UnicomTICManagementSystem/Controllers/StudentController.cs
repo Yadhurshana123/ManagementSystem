@@ -21,21 +21,6 @@ namespace UnicomTICManagementSystem.Controllers
 {
     class StudentController 
     {
-        //private readonly StudentService _studentService;
-
-        public StudentController()
-        {
-            //_studentService = new StudentService();
-        }
-
-        //public List<Student> GetAllStudents() => _studentService.GetAll();
-
-        //public void AddStudent(Student student) => _studentService.Add(student);
-
-        //public void UpdateStudent(Student student) => _studentService.Update(student);
-
-        //public void DeleteStudent(int studentId) => _studentService.Delete(studentId);
-
 
         public void AddStudent(Student student)
         {            

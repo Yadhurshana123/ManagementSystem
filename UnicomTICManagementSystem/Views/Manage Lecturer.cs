@@ -192,7 +192,6 @@ namespace UnicomTICManagementSystem.Views
             }
         }
 
-        //==== Search lecturer =====
         private void button2_click(object sender, EventArgs e)
         {
 

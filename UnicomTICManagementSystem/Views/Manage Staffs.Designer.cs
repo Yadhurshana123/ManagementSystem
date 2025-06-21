@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tsearch = new System.Windows.Forms.TextBox();
             this.temail = new System.Windows.Forms.TextBox();
             this.lemail = new System.Windows.Forms.Label();
@@ -166,8 +166,8 @@
             this.dgview_staffs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgview_staffs.Location = new System.Drawing.Point(84, 284);
             this.dgview_staffs.Name = "dgview_staffs";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgview_staffs.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgview_staffs.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgview_staffs.Size = new System.Drawing.Size(502, 206);
             this.dgview_staffs.TabIndex = 46;
             this.dgview_staffs.SelectionChanged += new System.EventHandler(this.dgview_staffs_SelectionChanged);
@@ -205,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(884, 513);
+            this.ClientSize = new System.Drawing.Size(837, 578);
             this.Controls.Add(this.username);
             this.Controls.Add(this.lsearch);
             this.Controls.Add(this.user_name);

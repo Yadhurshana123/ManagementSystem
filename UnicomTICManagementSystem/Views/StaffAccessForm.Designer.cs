@@ -39,8 +39,8 @@
             this.btn_staff_timetable = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_exit = new System.Windows.Forms.Button();
             this.btn_previous = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -71,7 +71,6 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.staff_panel);
-            this.panel2.Controls.Add(this.lbl_staff);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(188, 0);
             this.panel2.Name = "panel2";
@@ -82,7 +81,7 @@
             // 
             this.lbl_staff.AutoSize = true;
             this.lbl_staff.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_staff.Location = new System.Drawing.Point(216, 9);
+            this.lbl_staff.Location = new System.Drawing.Point(57, 12);
             this.lbl_staff.Name = "lbl_staff";
             this.lbl_staff.Size = new System.Drawing.Size(76, 31);
             this.lbl_staff.TabIndex = 0;
@@ -92,6 +91,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.btn_staff_details);
+            this.panel1.Controls.Add(this.lbl_staff);
             this.panel1.Controls.Add(this.btn_staff_exams);
             this.panel1.Controls.Add(this.btn_staff_shedule);
             this.panel1.Controls.Add(this.btn_staff_course);
@@ -107,7 +107,7 @@
             // 
             this.btn_staff_details.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_staff_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_staff_details.Location = new System.Drawing.Point(12, 70);
+            this.btn_staff_details.Location = new System.Drawing.Point(12, 83);
             this.btn_staff_details.Name = "btn_staff_details";
             this.btn_staff_details.Size = new System.Drawing.Size(165, 57);
             this.btn_staff_details.TabIndex = 5;
@@ -173,18 +173,6 @@
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // btn_exit
-            // 
-            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.Location = new System.Drawing.Point(550, 29);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(97, 30);
-            this.btn_exit.TabIndex = 0;
-            this.btn_exit.Text = "Exit";
-            this.btn_exit.UseVisualStyleBackColor = true;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
-            // 
             // btn_previous
             // 
             this.btn_previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -196,6 +184,18 @@
             this.btn_previous.Text = "Previous";
             this.btn_previous.UseVisualStyleBackColor = true;
             this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click);
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Location = new System.Drawing.Point(550, 29);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(97, 30);
+            this.btn_exit.TabIndex = 0;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // StaffAccessForm
             // 
@@ -210,8 +210,8 @@
             this.Text = "StaffAccessForm";
             this.Load += new System.EventHandler(this.StaffAccessForm_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);

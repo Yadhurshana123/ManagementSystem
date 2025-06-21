@@ -63,7 +63,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_details.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_details.Location = new System.Drawing.Point(66, 69);
+            this.dg_details.Location = new System.Drawing.Point(103, 83);
             this.dg_details.Name = "dg_details";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dg_details.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -87,15 +87,15 @@
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel1.Controls.Add(this.btn_update_details);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 473);
+            this.panel1.Location = new System.Drawing.Point(0, 515);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 63);
+            this.panel1.Size = new System.Drawing.Size(837, 63);
             this.panel1.TabIndex = 1;
             // 
             // btn_update_details
             // 
             this.btn_update_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_update_details.Location = new System.Drawing.Point(529, 13);
+            this.btn_update_details.Location = new System.Drawing.Point(592, 13);
             this.btn_update_details.Name = "btn_update_details";
             this.btn_update_details.Size = new System.Drawing.Size(139, 38);
             this.btn_update_details.TabIndex = 0;
@@ -108,7 +108,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(730, 536);
+            this.ClientSize = new System.Drawing.Size(837, 578);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dg_details);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

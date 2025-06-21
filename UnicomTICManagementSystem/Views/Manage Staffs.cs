@@ -171,44 +171,6 @@ namespace UnicomTICManagementSystem.Views
         private void btn_search_Click(object sender, EventArgs e)
         {
             
-            //    try
-            //    {
-            //        string input = tsearch.Text.Trim();
-            //        if (string.IsNullOrEmpty(input))
-            //        {
-            //            LoadStaffs();
-            //            return;
-            //        }
-
-            //        if (!int.TryParse(input, out int staffId))
-            //        {
-            //            MessageBox.Show("Please enter a valid numeric StaffID ID.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            return;
-            //        }
-
-            //        Staff staff = new Staff();
-            //        controller.SearchStaff(staffId, staff);
-
-            //        if (staff.StaffID != 0)
-            //        {
-            //            tname.Text = staff.Name;
-            //            taddress.Text = staff.Address;
-            //            temail.Text = staff.Email;
-            //            tnumber.Text = staff.PhoneNumber;
-            //            username.SelectedValue = staff.UserID;
-            //            dgview_staffs.DataSource = new List<Staff> { staff };
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Staff not found.");
-            //            dgview_staffs.DataSource = null;
-            //            ClearForm();
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
         }
 
         private void dgview_staffs_SelectionChanged(object sender, EventArgs e)

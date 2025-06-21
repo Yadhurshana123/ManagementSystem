@@ -20,8 +20,6 @@ namespace UnicomTICManagementSystem.Controllers
             {
                 cmd.Parameters.AddWithValue("@ttid", attendance.TimetableID);
                 cmd.Parameters.AddWithValue("@sid", attendance.StudentID);
-                //cmd.Parameters.AddWithValue("@intime", attendance.LogIn.ToString());
-                //cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.ToString());
                 cmd.Parameters.AddWithValue("@intime", attendance.LogIn.HasValue ? attendance.LogIn.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.HasValue ? attendance.LogOut.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@status", attendance.Status);
@@ -47,8 +45,6 @@ namespace UnicomTICManagementSystem.Controllers
                 cmd.Parameters.AddWithValue("@id", attendance.AttendanceID);
                 cmd.Parameters.AddWithValue("@ttid", attendance.TimetableID);
                 cmd.Parameters.AddWithValue("@sid", attendance.StudentID);
-                //cmd.Parameters.AddWithValue("@intime", attendance.LogIn.ToString("HH:mm:ss"));
-                //cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.ToString("HH:mm:ss"));
                 cmd.Parameters.AddWithValue("@intime", attendance.LogIn.HasValue ? attendance.LogIn.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.HasValue ? attendance.LogOut.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@status", attendance.Status);
@@ -77,8 +73,6 @@ namespace UnicomTICManagementSystem.Controllers
                             TimetableID = reader.GetInt32(1),
                             StudentID = reader.GetInt32(2),
                             Status = reader.GetString(3),
-                            //LogIn = DateTime.Parse(reader.GetString(4)),
-                            //LogOut = DateTime.Parse(reader.GetString(5))
                             LogIn = reader.IsDBNull(4) ? (DateTime?)null : DateTime.Parse(reader.GetString(4)),
                             LogOut = reader.IsDBNull(5) ? (DateTime?)null : DateTime.Parse(reader.GetString(5)),
 

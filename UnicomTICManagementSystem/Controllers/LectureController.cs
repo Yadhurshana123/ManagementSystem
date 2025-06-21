@@ -11,20 +11,6 @@ namespace UnicomTICManagementSystem.Controllers
 {
     internal class LectureController 
     {
-        //private readonly LectureService _lectureService;
-
-        //public LectureController()
-        //{
-        //    _lectureService = new LectureService();
-        //}
-
-        //public List<Lecturer> GetAllLectures() => _lectureService.GetAll();
-
-        //public void AddLecture(Lecturer lecturer) => _lectureService.Add(lecturer);
-
-        //public void UpdateLecture(Lecturer lecturer) => _lectureService.Update(lecturer);
-
-        //public void DeleteLecture(int teacherId) => _lectureService.Delete(teacherId);
 
         public void AddLecture(Lecturer lecturer)
         {

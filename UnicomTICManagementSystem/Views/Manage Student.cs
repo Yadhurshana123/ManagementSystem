@@ -198,44 +198,6 @@ namespace UnicomTICManagementSystem.Views
         private void button2_Click(object sender, EventArgs e)
         {
             
-            //try
-            //{
-            //    string input = tsearch.Text.Trim();
-            //    if (string.IsNullOrEmpty(input))
-            //    {
-            //        LoadStudents();
-            //        return;
-            //    }
-
-            //    if (!int.TryParse(input, out int studentId))
-            //    {
-            //        MessageBox.Show("Please enter a valid numeric Student ID.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        return;
-            //    }
-
-            //    Student student = new Student();
-            //    controller.SearchStudent(studentId);
-
-            //    if (student.StudentID != 0)
-            //    {
-            //        tname.Text = student.Name;
-            //        taddress.Text = student.Address;
-            //        dtp_dob.Value = DateTime.Parse(student.DOB);
-            //        tnumber.Text = student.PhoneNumber;
-            //        com_course.SelectedValue = student.CourseID;
-            //        user_name.SelectedValue = student.UserID;
-            //        dgview_students.DataSource = new List<Student> { student };
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Student not found.");
-            //        dgview_students.DataSource = null;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
         }
 
         private void dgview_students_SelectionChanged(object sender, EventArgs e)

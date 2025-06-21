@@ -59,12 +59,13 @@
             // dgv_timetable
             // 
             this.dgv_timetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_timetable.Location = new System.Drawing.Point(107, 231);
+            this.dgv_timetable.Location = new System.Drawing.Point(107, 246);
             this.dgv_timetable.Name = "dgv_timetable";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dgv_timetable.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_timetable.Size = new System.Drawing.Size(466, 193);
             this.dgv_timetable.TabIndex = 2;
+            this.dgv_timetable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_timetable_CellContentClick);
             this.dgv_timetable.SelectionChanged += new System.EventHandler(this.dgv_timetable_SelectionChanged);
             // 
             // start_time
@@ -211,7 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(730, 536);
+            this.ClientSize = new System.Drawing.Size(837, 578);
             this.Controls.Add(this.dtp_date);
             this.Controls.Add(this.ldate);
             this.Controls.Add(this.dtp_end_time);

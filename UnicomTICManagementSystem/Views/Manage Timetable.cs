@@ -259,5 +259,10 @@ namespace UnicomTICManagementSystem.Views
                 MessageBox.Show("Please enter a valid Timetable ID");
             }
         }
+
+        private void dgv_timetable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

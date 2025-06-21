@@ -89,7 +89,7 @@
             // dgview_rooms
             // 
             this.dgview_rooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgview_rooms.Location = new System.Drawing.Point(175, 226);
+            this.dgview_rooms.Location = new System.Drawing.Point(186, 259);
             this.dgview_rooms.Name = "dgview_rooms";
             this.dgview_rooms.Size = new System.Drawing.Size(345, 176);
             this.dgview_rooms.TabIndex = 5;
@@ -136,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(837, 578);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add);

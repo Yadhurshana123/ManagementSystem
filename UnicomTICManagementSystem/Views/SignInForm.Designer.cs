@@ -62,7 +62,7 @@
             this.log_tname.Location = new System.Drawing.Point(325, 85);
             this.log_tname.Multiline = true;
             this.log_tname.Name = "log_tname";
-            this.log_tname.Size = new System.Drawing.Size(243, 32);
+            this.log_tname.Size = new System.Drawing.Size(243, 29);
             this.log_tname.TabIndex = 2;
             // 
             // log_tpassword

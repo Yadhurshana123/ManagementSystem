@@ -134,8 +134,6 @@ namespace UnicomTICManagementSystem.Views
                     radio_btn_present.Checked = attendance.Status == "Present";
                     radio_btn_absent.Checked = attendance.Status == "Absent";
                     radio_btn_late.Checked = attendance.Status == "Late";
-                    //dtp_login.Value = attendance.LogIn;
-                    //dtp_logout.Value = attendance.LogOut;
                     dtp_login.Value = attendance.LogIn ?? DateTime.Now;
                     dtp_logout.Value = attendance.LogOut ?? DateTime.Now;
 

@@ -29,14 +29,14 @@ namespace UnicomTICManagementSystem.Views
 
         public void LoadForm(Form formObj)
         {
-            if (this.mainpanel1.Controls.Count > 0)
+            if (this.mainpanel.Controls.Count > 0)
             {
-                this.mainpanel1.Controls.RemoveAt(0);
+                this.mainpanel.Controls.RemoveAt(0);
             }
 
             formObj.TopLevel = false;
             formObj.Dock = DockStyle.Fill;
-            this.mainpanel1.Controls.Add(formObj);
+            this.mainpanel.Controls.Add(formObj);
             formObj.Show();
         }
         public void LoadPendingUsers()
@@ -201,6 +201,12 @@ namespace UnicomTICManagementSystem.Views
             {
                 MessageBox.Show("User not found.");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*StudentLecturerForm studentLecturerForm = new StudentLecturerForm();
+            LoadForm(studentLecturerForm);*/
         }
     }
 }

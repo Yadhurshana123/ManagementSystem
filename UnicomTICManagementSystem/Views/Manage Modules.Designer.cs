@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.t_search = new System.Windows.Forms.TextBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.lmodules = new System.Windows.Forms.Label();
@@ -108,10 +108,10 @@
             // dgview_modules
             // 
             this.dgview_modules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgview_modules.Location = new System.Drawing.Point(183, 223);
+            this.dgview_modules.Location = new System.Drawing.Point(156, 242);
             this.dgview_modules.Name = "dgview_modules";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgview_modules.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgview_modules.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgview_modules.Size = new System.Drawing.Size(502, 206);
             this.dgview_modules.TabIndex = 82;
             this.dgview_modules.SelectionChanged += new System.EventHandler(this.dgview_modules_SelectionChanged);
@@ -150,7 +150,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(837, 578);
             this.Controls.Add(this.lsearch);
             this.Controls.Add(this.course_name);
             this.Controls.Add(this.lcourses);

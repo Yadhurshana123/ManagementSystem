@@ -210,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(756, 495);
+            this.ClientSize = new System.Drawing.Size(837, 578);
             this.Controls.Add(this.com_module_name);
             this.Controls.Add(this.l_module_name);
             this.Controls.Add(this.dtp_st_time);

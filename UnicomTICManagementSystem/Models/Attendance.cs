@@ -14,7 +14,5 @@ namespace UnicomTICManagementSystem.Models
         public string Status { get; set; }
         public DateTime? LogIn { get; set; }
         public DateTime? LogOut { get; set; }
-        //public DateTime? LogIn { get; set; }
-        //public DateTime? LogOut { get; set; }
     }
 }
