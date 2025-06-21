@@ -139,38 +139,36 @@ namespace UnicomTICManagementSystem.Controllers
             }
             return null;
         }
-                
 
-//        public Lecturer GetLecturerInfo(int id)
-//        {
-//            string query = @"
-//                SELECT l.LectureID, l.Name, l.PhoneNumber, l.Email, l.Address,
-//                       u.Username, u.Role
-//                FROM Lecturers l
-//                JOIN Users u ON l.UserID = u.UserID
-//                WHERE l.UserID = @id";
+        public Lecturer GetLecturerByUserId(int userId)
+        {
+            string query = "SELECT * FROM Lecturers WHERE UserID = @userId";
 
-//            using (var conn = DBConfig.GetConnection())
-//            using (var cmd = new SQLiteCommand(query, conn))
-//            {
-//                cmd.Parameters.AddWithValue("@id", id);
-
-//                using (var reader = cmd.ExecuteReader())
-//                {
-//                    if (reader.Read())
-//                    {
-//                        return new Lecturer
-//                        {
-//                            LectureID = Convert.ToInt32(reader["LectureID"]),
-//                            Name = reader["Name"].ToString(),
-//                            PhoneNumber = reader["PhoneNumber"].ToString(),
-//                            Email = reader["Email"].ToString(),
-//                            Address = reader["Address"].ToString(),
-//                        };
-//                    }
-//                }
-//            }
-//            return null;
-//        }
+            using (var conn = DBConfig.GetConnection())
+            using (var cmd = new SQLiteCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@userId", userId);
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        Lecturer lecturer = new Lecturer
+                        {
+                            LectureID = Convert.ToInt32(reader["LectureID"]),
+                            UserID = Convert.ToInt32(reader["UserID"]),
+                            Name = reader["Name"].ToString(),
+                            PhoneNumber = reader["PhoneNumber"].ToString(),
+                            Address = reader["Address"].ToString(),
+                            Email = reader["Email"].ToString()
+                        };
+                        return lecturer;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
     }
 }

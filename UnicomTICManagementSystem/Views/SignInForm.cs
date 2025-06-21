@@ -18,7 +18,6 @@ namespace UnicomTICManagementSystem.Views
     public partial class sign_in : Form
     {
         UserController controller = new UserController();
-        //public static int LoggedInUserID;
         public sign_in()
         {
             InitializeComponent();
@@ -46,14 +45,20 @@ namespace UnicomTICManagementSystem.Views
                 MessageBox.Show("Please fill all fields.");
                 return;
             }
+            if (username == "Admin" && password == "Admin@#123")
+            {
+                new AdminForm().Show();
+                this.Hide();
+                return;
+
+            }
             string hashedPassword = HashPassword(password);
      
             User user = controller.UserValidation(username, hashedPassword);
             if (user != null)
             {
                 MessageBox.Show("Login Successful!");
-                SessionManager.LoggedInUserid = user.UserID;
-                //LoggedInUserID = user.UserID;
+                SessionManager.LoggedInUserId = user.UserID;
                 this.Hide();
                 switch (user.Role)
                 {

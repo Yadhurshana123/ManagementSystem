@@ -24,7 +24,7 @@ namespace UnicomTICManagementSystem.Views
             InitializeComponent();
             LoadExams();
             LoadModules();
-            LoadRooms();
+            LoadRoomsCombo();
         }
 
         public void LoadModules()
@@ -35,11 +35,11 @@ namespace UnicomTICManagementSystem.Views
             com_module_name.ValueMember = "ModuleID";
         }
 
-        public void LoadRooms()
+        public void LoadRoomsCombo()
         {
             var rooms = roomController.GetAllRooms();
             com_room_name.DataSource = rooms;
-            com_room_name.DisplayMember = "RoomName";
+            com_room_name.DisplayMember = "RoomType";
             com_room_name.ValueMember = "RoomID";
         }
 
@@ -70,7 +70,6 @@ namespace UnicomTICManagementSystem.Views
                 else
                 {
                     ctrl.Visible = true;
-                    //ctrl.Dock = DockStyle.Fill; 
                 }
             }
         }

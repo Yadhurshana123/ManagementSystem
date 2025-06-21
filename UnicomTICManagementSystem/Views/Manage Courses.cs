@@ -50,10 +50,10 @@ namespace UnicomTICManagementSystem.Views
                 else
                 {
                     ctrl.Visible = true;
-                    //ctrl.Dock = DockStyle.Fill; 
                 }
             }
         }
+
 
         private void btn_add_Click(object sender, EventArgs e)
         {
@@ -132,22 +132,7 @@ namespace UnicomTICManagementSystem.Views
   
         private void btn_search_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(t_search.Text, out int id))
-            {
-                CourseController controller = new CourseController();
-                Course result = controller.SearchCourse(id);
-
-                if (result != null)
-                {
-                    dgview_course.DataSource = new List<Course> { result };
-                }
-
-                else
-                {
-                    MessageBox.Show("Course not found!");
-                    ClearInputs();
-                }
-            }
+            
         }
 
         private void dgview_course_SelectionChanged(object sender, EventArgs e)
@@ -163,6 +148,26 @@ namespace UnicomTICManagementSystem.Views
                 }
                 else
                 {
+                    ClearInputs();
+                }
+            }
+        }
+
+        private void t_search_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(t_search.Text, out int id))
+            {
+                CourseController controller = new CourseController();
+                Course result = controller.SearchCourse(id);
+
+                if (result != null)
+                {
+                    dgview_course.DataSource = new List<Course> { result };
+                }
+
+                else
+                {
+                    MessageBox.Show("Course not found!");
                     ClearInputs();
                 }
             }

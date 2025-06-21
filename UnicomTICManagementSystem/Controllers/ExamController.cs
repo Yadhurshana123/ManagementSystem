@@ -57,10 +57,10 @@ namespace UnicomTICManagementSystem.Controllers
                         ModuleID = reader.GetInt32(2),
                         ModuleName = reader.GetString(3),
                         RoomID = reader.GetInt32(4),
-                        RoomName = reader.GetString(5),
-                        Date = reader.GetDateTime(6),
-                        StartTime = TimeSpan.Parse(reader.GetString(reader.GetOrdinal("StartTime"))),
-                        EndTime = TimeSpan.Parse(reader.GetString(reader.GetOrdinal("EndTime")))
+                        Date = reader.GetDateTime(5),
+                        RoomName = reader.GetString(6),                      
+                        StartTime = TimeSpan.Parse(reader.GetString(7)),
+                        EndTime = TimeSpan.Parse(reader.GetString(8))
                     });
                 }
 

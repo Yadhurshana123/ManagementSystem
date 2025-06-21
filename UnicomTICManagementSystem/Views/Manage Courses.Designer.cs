@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lcourse = new System.Windows.Forms.Label();
             this.tcourse = new System.Windows.Forms.TextBox();
             this.btn_edit = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.dgview_course = new System.Windows.Forms.DataGridView();
             this.btn_delete = new System.Windows.Forms.Button();
             this.t_search = new System.Windows.Forms.TextBox();
-            this.btn_search = new System.Windows.Forms.Button();
             this.lsearch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgview_course)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             // btn_edit
             // 
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(288, 168);
+            this.btn_edit.Location = new System.Drawing.Point(595, 223);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(102, 35);
             this.btn_edit.TabIndex = 65;
@@ -72,7 +72,7 @@
             // btn_add
             // 
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(137, 168);
+            this.btn_add.Location = new System.Drawing.Point(595, 158);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(102, 35);
             this.btn_add.TabIndex = 63;
@@ -82,19 +82,28 @@
             // 
             // dgview_course
             // 
+            this.dgview_course.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgview_course.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgview_course.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgview_course.Location = new System.Drawing.Point(90, 238);
+            this.dgview_course.Location = new System.Drawing.Point(173, 158);
             this.dgview_course.Name = "dgview_course";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgview_course.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgview_course.Size = new System.Drawing.Size(502, 206);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgview_course.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgview_course.Size = new System.Drawing.Size(387, 197);
             this.dgview_course.TabIndex = 62;
             this.dgview_course.SelectionChanged += new System.EventHandler(this.dgview_course_SelectionChanged);
             // 
             // btn_delete
             // 
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(435, 168);
+            this.btn_delete.Location = new System.Drawing.Point(595, 294);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(102, 35);
             this.btn_delete.TabIndex = 79;
@@ -108,16 +117,7 @@
             this.t_search.Name = "t_search";
             this.t_search.Size = new System.Drawing.Size(251, 20);
             this.t_search.TabIndex = 80;
-            // 
-            // btn_search
-            // 
-            this.btn_search.Location = new System.Drawing.Point(577, 97);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(75, 23);
-            this.btn_search.TabIndex = 81;
-            this.btn_search.Text = "Search";
-            this.btn_search.UseVisualStyleBackColor = true;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            this.t_search.TextChanged += new System.EventHandler(this.t_search_TextChanged);
             // 
             // lsearch
             // 
@@ -136,7 +136,6 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lsearch);
-            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.t_search);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.lcourse);
@@ -162,7 +161,6 @@
         private System.Windows.Forms.DataGridView dgview_course;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.TextBox t_search;
-        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.Label lsearch;
     }
 }

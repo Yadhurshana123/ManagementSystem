@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_search = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.t_search = new System.Windows.Forms.TextBox();
             this.btn_delete = new System.Windows.Forms.Button();
             this.lmodules = new System.Windows.Forms.Label();
@@ -43,17 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgview_modules)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_search
-            // 
-            this.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_search.Location = new System.Drawing.Point(641, 131);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(75, 23);
-            this.btn_search.TabIndex = 89;
-            this.btn_search.Text = "Search";
-            this.btn_search.UseVisualStyleBackColor = true;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
-            // 
             // t_search
             // 
             this.t_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -61,6 +49,7 @@
             this.t_search.Name = "t_search";
             this.t_search.Size = new System.Drawing.Size(251, 22);
             this.t_search.TabIndex = 88;
+            this.t_search.TextChanged += new System.EventHandler(this.t_search_TextChanged);
             // 
             // btn_delete
             // 
@@ -96,7 +85,7 @@
             // 
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(387, 172);
+            this.btn_edit.Location = new System.Drawing.Point(373, 172);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(102, 35);
             this.btn_edit.TabIndex = 84;
@@ -121,8 +110,8 @@
             this.dgview_modules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgview_modules.Location = new System.Drawing.Point(183, 223);
             this.dgview_modules.Name = "dgview_modules";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgview_modules.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgview_modules.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgview_modules.Size = new System.Drawing.Size(502, 206);
             this.dgview_modules.TabIndex = 82;
             this.dgview_modules.SelectionChanged += new System.EventHandler(this.dgview_modules_SelectionChanged);
@@ -165,7 +154,6 @@
             this.Controls.Add(this.lsearch);
             this.Controls.Add(this.course_name);
             this.Controls.Add(this.lcourses);
-            this.Controls.Add(this.btn_search);
             this.Controls.Add(this.t_search);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.lmodules);
@@ -183,8 +171,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox t_search;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Label lmodules;

@@ -72,21 +72,5 @@ namespace UnicomTICManagementSystem.Controllers
                 cmd.ExecuteNonQuery();
             }
         }
-
-        //private readonly StudentLectureService _service;
-
-        //public StudentLecturerController()
-        //{
-        //    _service = new StudentLectureService();
-        //}
-
-        //public void AssignLecturerToStudent(int studentId, int lectureId)
-        //    => _service.AssignLecturerToStudent(studentId, lectureId);
-
-        //public void RemoveLecturerFromStudent(int studentId, int lectureId)
-        //    => _service.RemoveLecturerFromStudent(studentId, lectureId);
-
-        //public List<Lecturer> GetTeachersForStudent(int studentId)
-        //    => _service.GetTeachersForStudent(studentId);
     }
 }

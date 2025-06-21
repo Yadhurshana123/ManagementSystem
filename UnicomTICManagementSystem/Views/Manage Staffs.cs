@@ -170,26 +170,7 @@ namespace UnicomTICManagementSystem.Views
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(tsearch.Text, out int id))
-            {
-                StaffController controller = new StaffController();
-                Staff result = controller.SearchStaff(id);
-
-                if (result != null)
-                {
-                    dgview_staffs.DataSource = new List<Staff> { result };
-                }
-
-                else
-                {
-                    MessageBox.Show("Staff not found!");
-                    ClearForm();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid Staff ID");
-            }
+            
             //    try
             //    {
             //        string input = tsearch.Text.Trim();
@@ -255,6 +236,30 @@ namespace UnicomTICManagementSystem.Views
         private void lname_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsearch_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(tsearch.Text, out int id))
+            {
+                StaffController controller = new StaffController();
+                Staff result = controller.SearchStaff(id);
+
+                if (result != null)
+                {
+                    dgview_staffs.DataSource = new List<Staff> { result };
+                }
+
+                else
+                {
+                    MessageBox.Show("Staff not found!");
+                    ClearForm();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid Staff ID");
+            }
         }
     }
 }

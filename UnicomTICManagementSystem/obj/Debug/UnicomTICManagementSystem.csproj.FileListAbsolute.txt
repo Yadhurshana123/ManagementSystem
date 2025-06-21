@@ -52,3 +52,4 @@ Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICMana
 Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.ManageAttendance.resources
 Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.ManageExams.resources
 Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.StudentLecturerForm.resources
+Z:\Programming Language\Learn C#\Project\UnicomTICManagementSystem\UnicomTICManagementSystem\obj\Debug\UnicomTICManagementSystem.Views.DetailsForm.resources

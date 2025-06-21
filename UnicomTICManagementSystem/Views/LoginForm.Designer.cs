@@ -36,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.mainpanal = new System.Windows.Forms.Panel();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -44,6 +45,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btn_exit);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_sihn_up);
@@ -51,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
+            this.panel1.Size = new System.Drawing.Size(200, 617);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -76,8 +78,9 @@
             // 
             // btn_sihn_up
             // 
+            this.btn_sihn_up.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sihn_up.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sihn_up.Location = new System.Drawing.Point(24, 374);
+            this.btn_sihn_up.Location = new System.Drawing.Point(24, 379);
             this.btn_sihn_up.Name = "btn_sihn_up";
             this.btn_sihn_up.Size = new System.Drawing.Size(138, 64);
             this.btn_sihn_up.TabIndex = 1;
@@ -87,8 +90,9 @@
             // 
             // btn_sign_in
             // 
+            this.btn_sign_in.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sign_in.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sign_in.Location = new System.Drawing.Point(24, 287);
+            this.btn_sign_in.Location = new System.Drawing.Point(24, 269);
             this.btn_sign_in.Name = "btn_sign_in";
             this.btn_sign_in.Size = new System.Drawing.Size(138, 64);
             this.btn_sign_in.TabIndex = 0;
@@ -100,9 +104,10 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(206, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(592, 63);
+            this.panel2.Size = new System.Drawing.Size(773, 63);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -119,16 +124,29 @@
             // mainpanal
             // 
             this.mainpanal.BackColor = System.Drawing.SystemColors.Window;
-            this.mainpanal.Location = new System.Drawing.Point(206, 69);
+            this.mainpanal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanal.Location = new System.Drawing.Point(200, 63);
             this.mainpanal.Name = "mainpanal";
-            this.mainpanal.Size = new System.Drawing.Size(592, 381);
+            this.mainpanal.Size = new System.Drawing.Size(773, 554);
             this.mainpanal.TabIndex = 2;
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Location = new System.Drawing.Point(24, 487);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(138, 64);
+            this.btn_exit.TabIndex = 3;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(973, 617);
             this.Controls.Add(this.mainpanal);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -154,5 +172,6 @@
         private System.Windows.Forms.Button btn_sign_in;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

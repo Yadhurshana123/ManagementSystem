@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTICManagementSystem.Controllers;
 using UnicomTICManagementSystem.Models;
+using UnicomTICManagementSystem.Services;
+using UnicomTICManagementSystem.Views;
 
 namespace UnicomTICManagementSystem.Views
 {
@@ -193,29 +195,9 @@ namespace UnicomTICManagementSystem.Views
             }
         }
 
-        //==========Search student========
         private void button2_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(tsearch.Text, out int id))
-            {
-                StudentController controller = new StudentController();
-                Student result = controller.SearchStudent(id);
-
-                if (result != null)
-                {
-                    dgview_students.DataSource = new List<Student> { result };
-                }
-
-                else
-                {
-                    MessageBox.Show("Student not found!");
-                    ClearForm();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid Student ID");
-            }
+            
             //try
             //{
             //    string input = tsearch.Text.Trim();
@@ -291,7 +273,30 @@ namespace UnicomTICManagementSystem.Views
         {
           
         }
+
+        private void tsearch_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(tsearch.Text, out int id))
+            {
+                StudentController controller = new StudentController();
+                Student result = controller.SearchStudent(id);
+
+                if (result != null)
+                {
+                    dgview_students.DataSource = new List<Student> { result };
+                }
+
+                else
+                {
+                    MessageBox.Show("Student not found!");
+                    ClearForm();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid Student ID");
+            }
+        }
     }
 }
-
 

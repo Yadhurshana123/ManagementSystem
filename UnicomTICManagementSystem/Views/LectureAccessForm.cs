@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UnicomTICManagementSystem.Controllers;
+using UnicomTICManagementSystem.Models;
+using UnicomTICManagementSystem.Services;
 
 namespace UnicomTICManagementSystem.Views
 {
@@ -31,7 +34,22 @@ namespace UnicomTICManagementSystem.Views
         }
         private void btn_lec_details_Click(object sender, EventArgs e)
         {
+            int userId = SessionManager.LoggedInUserId;
+            UserController userController = new UserController();
+            User user = userController.GetUserByUserId(userId);
 
+            LectureController lcturecontroller = new LectureController();
+            Lecturer lecturer = lcturecontroller.GetLecturerByUserId(userId);
+
+            if (user != null)
+            {
+                DetailsForm detailForm = new DetailsForm(user, null, lecturer, null);
+                LoadForm(detailForm);
+            }
+            else
+            {
+                MessageBox.Show("User not found.");
+            }
         }
 
         private void btn_lec_timetable_Click(object sender, EventArgs e)
@@ -59,6 +77,19 @@ namespace UnicomTICManagementSystem.Views
             Manage_Courses manageCourses = new Manage_Courses();
             manageCourses.HideAllControlsExceptDataGridView();
             LoadForm(manageCourses);
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();                
+            Application.Exit();
+        }
+
+        private void btn_previous_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

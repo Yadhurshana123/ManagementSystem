@@ -12,6 +12,9 @@ namespace UnicomTICManagementSystem.Models
         public int TimetableID { get; set; }
         public int StudentID { get; set; }   
         public string Status { get; set; }
-        public DateTime Timestamp { get; set; }
+        public DateTime? LogIn { get; set; }
+        public DateTime? LogOut { get; set; }
+        //public DateTime? LogIn { get; set; }
+        //public DateTime? LogOut { get; set; }
     }
 }

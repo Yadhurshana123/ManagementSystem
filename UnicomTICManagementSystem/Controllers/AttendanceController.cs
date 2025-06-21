@@ -13,14 +13,17 @@ namespace UnicomTICManagementSystem.Controllers
     {
         public void MarkAttendance(Attendance attendance)
         {
-            string query = @"INSERT INTO Attendances (TimetableID, StudentID, Timestamp, Status )
-                         VALUES (@ttid, @sid, @time, @status)";
+            string query = @"INSERT INTO Attendances_new (TimetableID, StudentID, LogIn, LogOut, Status )
+                         VALUES (@ttid, @sid, @intime, @outtime, @status)";
             using (var conn = DBConfig.GetConnection())
             using (var cmd = new SQLiteCommand(query, conn))
             {
                 cmd.Parameters.AddWithValue("@ttid", attendance.TimetableID);
                 cmd.Parameters.AddWithValue("@sid", attendance.StudentID);
-                cmd.Parameters.AddWithValue("@time", attendance.Timestamp.ToString());
+                //cmd.Parameters.AddWithValue("@intime", attendance.LogIn.ToString());
+                //cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.ToString());
+                cmd.Parameters.AddWithValue("@intime", attendance.LogIn.HasValue ? attendance.LogIn.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.HasValue ? attendance.LogOut.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@status", attendance.Status);
                 cmd.ExecuteNonQuery();
             }
@@ -29,10 +32,11 @@ namespace UnicomTICManagementSystem.Controllers
         public void UpdateAttendance(Attendance attendance)
         {
             string query = @"
-                UPDATE Attendances 
+                UPDATE Attendances_new 
                 SET TimetableID = @ttid,
                     StudentID = @sid,
-                    Timestamp = @time, 
+                    LogIn = @intime, 
+                    LogOut = @outtime, 
                     Status = @status 
                 WHERE AttendanceID = @id";
 
@@ -43,7 +47,10 @@ namespace UnicomTICManagementSystem.Controllers
                 cmd.Parameters.AddWithValue("@id", attendance.AttendanceID);
                 cmd.Parameters.AddWithValue("@ttid", attendance.TimetableID);
                 cmd.Parameters.AddWithValue("@sid", attendance.StudentID);
-                cmd.Parameters.AddWithValue("@time", attendance.Timestamp.ToString("yyyy-MM-dd HH:mm:ss"));
+                //cmd.Parameters.AddWithValue("@intime", attendance.LogIn.ToString("HH:mm:ss"));
+                //cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.ToString("HH:mm:ss"));
+                cmd.Parameters.AddWithValue("@intime", attendance.LogIn.HasValue ? attendance.LogIn.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@outtime", attendance.LogOut.HasValue ? attendance.LogOut.Value.ToString("HH:mm:ss") : (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@status", attendance.Status);
                 cmd.ExecuteNonQuery();
             }
@@ -52,11 +59,10 @@ namespace UnicomTICManagementSystem.Controllers
         public List<Attendance> GetAttendance()
         {
             var list = new List<Attendance>();
-            string query = @"SELECT a.AttendanceID, a.TimetableID, a.StudentID, a.Status, a.Timestamp, s.Name
-                 FROM Attendances a
+            string query = @"SELECT a.AttendanceID, a.TimetableID, a.StudentID, a.Status, a.LogIn, a.LogOut
+                 FROM Attendances_new a
                  LEFT JOIN Students s ON a.StudentID = s.StudentID
                  LEFT JOIN Timetables t ON a.TimetableID = t.TimetableID";
-
 
             using (var conn = DBConfig.GetConnection())
             using (var cmd = new SQLiteCommand(query, conn))
@@ -71,7 +77,11 @@ namespace UnicomTICManagementSystem.Controllers
                             TimetableID = reader.GetInt32(1),
                             StudentID = reader.GetInt32(2),
                             Status = reader.GetString(3),
-                            Timestamp = DateTime.Parse(reader.GetString(4))
+                            //LogIn = DateTime.Parse(reader.GetString(4)),
+                            //LogOut = DateTime.Parse(reader.GetString(5))
+                            LogIn = reader.IsDBNull(4) ? (DateTime?)null : DateTime.Parse(reader.GetString(4)),
+                            LogOut = reader.IsDBNull(5) ? (DateTime?)null : DateTime.Parse(reader.GetString(5)),
+
                         };
                         list.Add(attendance);
                     }

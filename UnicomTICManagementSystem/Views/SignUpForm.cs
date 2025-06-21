@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -11,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTICManagementSystem.Controllers;
+using UnicomTICManagementSystem.Datas;
 using UnicomTICManagementSystem.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -68,21 +70,40 @@ namespace UnicomTICManagementSystem.Views
                 return;
             }
 
-            else
+            string query = @"
+                SELECT 1 FROM Users WHERE Email = @Email OR Username = @Username
+                UNION
+                SELECT 1 FROM PendingUsers WHERE Email = @Email OR Username = @Username";
+
+            using (var conn = DBConfig.GetConnection())
+            using (var cmd = new SQLiteCommand(query, conn))
             {
-                string hashedPassword = HashPassword(password);           
-                User user = new User()
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Username", username);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
                 {
-                    Username = username,
-                    Password = hashedPassword,  
-                    Email = email,
-                    Role = role 
-                };
-                UserController userControl = new UserController();
-                userControl.AddUser(user);
-                MessageBox.Show("Registration Successful!");
-                ClearInputs();
-            }    
+                    MessageBox.Show("User already registered.");
+                    return; 
+                }
+                else
+                {
+                    string hashedPassword = HashPassword(password);
+                    User user = new User()
+                    {
+                        Username = username,
+                        Password = hashedPassword,
+                        Email = email,
+                        Role = role
+                    };
+                    UserController userControl = new UserController();
+                    userControl.AddPendingUser(user);
+                    MessageBox.Show("Registration submitted. Waiting for admin approval.");
+                    ClearInputs();
+                }
+            }   
         }
 
         public void ClearInputs() 

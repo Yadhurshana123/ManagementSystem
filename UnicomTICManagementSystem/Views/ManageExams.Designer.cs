@@ -52,7 +52,7 @@
             // 
             this.l_st_time.AutoSize = true;
             this.l_st_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_st_time.Location = new System.Drawing.Point(159, 183);
+            this.l_st_time.Location = new System.Drawing.Point(60, 149);
             this.l_st_time.Name = "l_st_time";
             this.l_st_time.Size = new System.Drawing.Size(71, 18);
             this.l_st_time.TabIndex = 74;
@@ -62,7 +62,7 @@
             // 
             this.lDate.AutoSize = true;
             this.lDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDate.Location = new System.Drawing.Point(159, 137);
+            this.lDate.Location = new System.Drawing.Point(443, 83);
             this.lDate.Name = "lDate";
             this.lDate.Size = new System.Drawing.Size(78, 18);
             this.lDate.TabIndex = 72;
@@ -72,7 +72,7 @@
             // 
             this.room_name.AutoSize = true;
             this.room_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.room_name.Location = new System.Drawing.Point(159, 93);
+            this.room_name.Location = new System.Drawing.Point(60, 83);
             this.room_name.Name = "room_name";
             this.room_name.Size = new System.Drawing.Size(91, 18);
             this.room_name.TabIndex = 71;
@@ -80,7 +80,7 @@
             // 
             // texam_name
             // 
-            this.texam_name.Location = new System.Drawing.Point(313, 52);
+            this.texam_name.Location = new System.Drawing.Point(448, 36);
             this.texam_name.Name = "texam_name";
             this.texam_name.Size = new System.Drawing.Size(251, 20);
             this.texam_name.TabIndex = 69;
@@ -89,7 +89,7 @@
             // 
             this.lexam_name.AutoSize = true;
             this.lexam_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lexam_name.Location = new System.Drawing.Point(159, 54);
+            this.lexam_name.Location = new System.Drawing.Point(443, 15);
             this.lexam_name.Name = "lexam_name";
             this.lexam_name.Size = new System.Drawing.Size(87, 18);
             this.lexam_name.TabIndex = 68;
@@ -99,7 +99,7 @@
             // 
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(612, 334);
+            this.btn_edit.Location = new System.Drawing.Point(358, 430);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(102, 35);
             this.btn_edit.TabIndex = 66;
@@ -111,7 +111,7 @@
             // 
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(612, 410);
+            this.btn_delete.Location = new System.Drawing.Point(484, 430);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(102, 35);
             this.btn_delete.TabIndex = 65;
@@ -123,7 +123,7 @@
             // 
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(612, 258);
+            this.btn_add.Location = new System.Drawing.Point(224, 430);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(102, 35);
             this.btn_add.TabIndex = 64;
@@ -134,18 +134,18 @@
             // dgview_exam
             // 
             this.dgview_exam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgview_exam.Location = new System.Drawing.Point(87, 258);
+            this.dgview_exam.Location = new System.Drawing.Point(95, 198);
             this.dgview_exam.Name = "dgview_exam";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dgview_exam.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgview_exam.Size = new System.Drawing.Size(502, 206);
+            this.dgview_exam.Size = new System.Drawing.Size(531, 206);
             this.dgview_exam.TabIndex = 63;
             this.dgview_exam.SelectionChanged += new System.EventHandler(this.dgview_exam_SelectionChanged);
             // 
             // com_room_name
             // 
             this.com_room_name.FormattingEnabled = true;
-            this.com_room_name.Location = new System.Drawing.Point(313, 90);
+            this.com_room_name.Location = new System.Drawing.Point(63, 104);
             this.com_room_name.Name = "com_room_name";
             this.com_room_name.Size = new System.Drawing.Size(251, 21);
             this.com_room_name.TabIndex = 76;
@@ -154,7 +154,7 @@
             // 
             this.l_end_time.AutoSize = true;
             this.l_end_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_end_time.Location = new System.Drawing.Point(159, 226);
+            this.l_end_time.Location = new System.Drawing.Point(443, 149);
             this.l_end_time.Name = "l_end_time";
             this.l_end_time.Size = new System.Drawing.Size(66, 18);
             this.l_end_time.TabIndex = 77;
@@ -164,7 +164,7 @@
             // 
             this.dtp_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_date.Location = new System.Drawing.Point(313, 133);
+            this.dtp_date.Location = new System.Drawing.Point(448, 104);
             this.dtp_date.Name = "dtp_date";
             this.dtp_date.Size = new System.Drawing.Size(251, 22);
             this.dtp_date.TabIndex = 78;
@@ -173,7 +173,7 @@
             // 
             this.dtp_end_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_end_time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_end_time.Location = new System.Drawing.Point(313, 222);
+            this.dtp_end_time.Location = new System.Drawing.Point(448, 170);
             this.dtp_end_time.Name = "dtp_end_time";
             this.dtp_end_time.Size = new System.Drawing.Size(251, 22);
             this.dtp_end_time.TabIndex = 79;
@@ -182,7 +182,7 @@
             // 
             this.dtp_st_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_st_time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_st_time.Location = new System.Drawing.Point(313, 179);
+            this.dtp_st_time.Location = new System.Drawing.Point(63, 170);
             this.dtp_st_time.Name = "dtp_st_time";
             this.dtp_st_time.Size = new System.Drawing.Size(251, 22);
             this.dtp_st_time.TabIndex = 80;
@@ -191,7 +191,7 @@
             // 
             this.l_module_name.AutoSize = true;
             this.l_module_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_module_name.Location = new System.Drawing.Point(159, 15);
+            this.l_module_name.Location = new System.Drawing.Point(60, 15);
             this.l_module_name.Name = "l_module_name";
             this.l_module_name.Size = new System.Drawing.Size(98, 18);
             this.l_module_name.TabIndex = 81;
@@ -200,7 +200,7 @@
             // com_module_name
             // 
             this.com_module_name.FormattingEnabled = true;
-            this.com_module_name.Location = new System.Drawing.Point(313, 12);
+            this.com_module_name.Location = new System.Drawing.Point(63, 36);
             this.com_module_name.Name = "com_module_name";
             this.com_module_name.Size = new System.Drawing.Size(251, 21);
             this.com_module_name.TabIndex = 82;
@@ -210,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(825, 482);
+            this.ClientSize = new System.Drawing.Size(756, 495);
             this.Controls.Add(this.com_module_name);
             this.Controls.Add(this.l_module_name);
             this.Controls.Add(this.dtp_st_time);

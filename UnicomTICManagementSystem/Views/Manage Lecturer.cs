@@ -195,6 +195,11 @@ namespace UnicomTICManagementSystem.Views
         //==== Search lecturer =====
         private void button2_click(object sender, EventArgs e)
         {
+
+        }
+
+        private void tsearch_TextChanged(object sender, EventArgs e)
+        {
             if (int.TryParse(tsearch.Text, out int id))
             {
                 LectureController controller = new LectureController();
@@ -209,49 +214,18 @@ namespace UnicomTICManagementSystem.Views
                 {
                     MessageBox.Show("Lecturer not found!");
                     ClearForm();
+                    LoadLectures();
                 }
             }
             else
             {
                 MessageBox.Show("Please enter a valid Student ID");
+                LoadLectures();
             }
-            //try
-            //{
-            //    string input = tsearch.Text.Trim();
-            //    if (string.IsNullOrEmpty(input))
-            //    {
-            //        LoadLectures(); 
-            //        return;
-            //    }
+        }
 
-            //    if (!int.TryParse(input, out int lectureId))
-            //    {
-            //        MessageBox.Show("Please enter a valid numeric Lecture ID.", "Invalid ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        return;
-            //    }
-
-            //    Lecturer lecturer = new Lecturer();
-            //    controller.SearchLecture(lectureId, lecturer);
-
-            //    if (lecturer.LectureID != 0)
-            //    {
-            //        tname.Text = lecturer.Name;
-            //        taddress.Text = lecturer.Address;
-            //        temail.Text = lecturer.Email;
-            //        tnumber.Text = lecturer.PhoneNumber;
-            //        user_name.SelectedValue = lecturer.UserID;
-            //        dgview_lectures.DataSource = new List<Lecturer> { lecturer };
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Lecturer not found.");
-            //        dgview_lectures.DataSource = null;
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+        private void dgview_lectures_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

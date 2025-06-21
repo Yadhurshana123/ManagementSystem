@@ -34,7 +34,8 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.btn_assign = new System.Windows.Forms.Button();
             this.btn_remove = new System.Windows.Forms.Button();
-            this.list_view_StuLec = new System.Windows.Forms.ListView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_student_name
@@ -77,7 +78,7 @@
             // 
             this.btn_assign.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_assign.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_assign.Location = new System.Drawing.Point(43, 257);
+            this.btn_assign.Location = new System.Drawing.Point(71, 348);
             this.btn_assign.Name = "btn_assign";
             this.btn_assign.Size = new System.Drawing.Size(142, 40);
             this.btn_assign.TabIndex = 4;
@@ -88,29 +89,28 @@
             // 
             this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_remove.Location = new System.Drawing.Point(250, 258);
+            this.btn_remove.Location = new System.Drawing.Point(279, 348);
             this.btn_remove.Name = "btn_remove";
             this.btn_remove.Size = new System.Drawing.Size(139, 39);
             this.btn_remove.TabIndex = 5;
             this.btn_remove.Text = "Remove Lecturer";
             this.btn_remove.UseVisualStyleBackColor = true;
             // 
-            // list_view_StuLec
+            // dataGridView1
             // 
-            this.list_view_StuLec.HideSelection = false;
-            this.list_view_StuLec.Location = new System.Drawing.Point(497, 37);
-            this.list_view_StuLec.Name = "list_view_StuLec";
-            this.list_view_StuLec.Size = new System.Drawing.Size(291, 380);
-            this.list_view_StuLec.TabIndex = 6;
-            this.list_view_StuLec.UseCompatibleStateImageBehavior = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(495, 58);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 411);
+            this.dataGridView1.TabIndex = 6;
             // 
             // StudentLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.list_view_StuLec);
+            this.ClientSize = new System.Drawing.Size(773, 554);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.btn_assign);
             this.Controls.Add(this.checkedListBox1);
@@ -120,6 +120,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentLecturerForm";
             this.Text = "StudentLecturerForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +134,6 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button btn_assign;
         private System.Windows.Forms.Button btn_remove;
-        private System.Windows.Forms.ListView list_view_StuLec;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

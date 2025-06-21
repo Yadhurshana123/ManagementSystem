@@ -23,9 +23,7 @@ namespace UnicomTICManagementSystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
-            //Application.Run(new AdminForm());
-            Application.Run(new StudentLecturerForm());
+            Application.Run(new LoginForm());
         }
     }
 }

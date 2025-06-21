@@ -172,6 +172,11 @@ namespace UnicomTICManagementSystem.Views
 
         private void btn_search_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void t_search_TextChanged(object sender, EventArgs e)
+        {
             if (int.TryParse(t_search.Text, out int id))
             {
                 ModuleController controller = new ModuleController();

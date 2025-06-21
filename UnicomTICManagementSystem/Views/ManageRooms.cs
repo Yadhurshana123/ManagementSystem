@@ -83,7 +83,7 @@ namespace UnicomTICManagementSystem.Views
                     RoomName = troom.Text,
                     RoomType = ttype.Text,
                 };
-                controller.AddRoom(room);
+                controller.UpdateRoom(room);
                 LoadRooms();
                 MessageBox.Show("Room edited successfully!");
                 ClearForm();

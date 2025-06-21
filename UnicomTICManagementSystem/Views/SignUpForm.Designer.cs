@@ -44,7 +44,7 @@
             // 
             this.lusername.AutoSize = true;
             this.lusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lusername.Location = new System.Drawing.Point(129, 69);
+            this.lusername.Location = new System.Drawing.Point(157, 69);
             this.lusername.Name = "lusername";
             this.lusername.Size = new System.Drawing.Size(80, 18);
             this.lusername.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.lpassword.AutoSize = true;
             this.lpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lpassword.Location = new System.Drawing.Point(129, 121);
+            this.lpassword.Location = new System.Drawing.Point(157, 124);
             this.lpassword.Name = "lpassword";
             this.lpassword.Size = new System.Drawing.Size(75, 18);
             this.lpassword.TabIndex = 1;
@@ -64,7 +64,7 @@
             // tusername
             // 
             this.tusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tusername.Location = new System.Drawing.Point(255, 70);
+            this.tusername.Location = new System.Drawing.Point(294, 65);
             this.tusername.Name = "tusername";
             this.tusername.Size = new System.Drawing.Size(246, 22);
             this.tusername.TabIndex = 2;
@@ -72,7 +72,7 @@
             // tpassword
             // 
             this.tpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpassword.Location = new System.Drawing.Point(255, 122);
+            this.tpassword.Location = new System.Drawing.Point(294, 120);
             this.tpassword.Name = "tpassword";
             this.tpassword.Size = new System.Drawing.Size(246, 22);
             this.tpassword.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             this.lrole.AutoSize = true;
             this.lrole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lrole.Location = new System.Drawing.Point(129, 230);
+            this.lrole.Location = new System.Drawing.Point(163, 258);
             this.lrole.Name = "lrole";
             this.lrole.Size = new System.Drawing.Size(39, 18);
             this.lrole.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.btn_register.BackColor = System.Drawing.Color.ForestGreen;
             this.btn_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_register.Location = new System.Drawing.Point(159, 280);
+            this.btn_register.Location = new System.Drawing.Point(160, 383);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(134, 51);
             this.btn_register.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             this.cbox_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbox_role.FormattingEnabled = true;
-            this.cbox_role.Location = new System.Drawing.Point(255, 222);
+            this.cbox_role.Location = new System.Drawing.Point(294, 252);
             this.cbox_role.Name = "cbox_role";
             this.cbox_role.Size = new System.Drawing.Size(246, 24);
             this.cbox_role.TabIndex = 7;
@@ -113,7 +113,7 @@
             // 
             this.btn_cancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(388, 280);
+            this.btn_cancel.Location = new System.Drawing.Point(404, 383);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(136, 51);
             this.btn_cancel.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             this.lemail.AutoSize = true;
             this.lemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lemail.Location = new System.Drawing.Point(129, 171);
+            this.lemail.Location = new System.Drawing.Point(157, 190);
             this.lemail.Name = "lemail";
             this.lemail.Size = new System.Drawing.Size(45, 18);
             this.lemail.TabIndex = 9;
@@ -134,7 +134,7 @@
             // temail
             // 
             this.temail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.temail.Location = new System.Drawing.Point(255, 172);
+            this.temail.Location = new System.Drawing.Point(294, 186);
             this.temail.Name = "temail";
             this.temail.Size = new System.Drawing.Size(246, 22);
             this.temail.TabIndex = 10;
@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(773, 554);
             this.Controls.Add(this.temail);
             this.Controls.Add(this.lemail);
             this.Controls.Add(this.btn_cancel);

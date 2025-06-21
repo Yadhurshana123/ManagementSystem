@@ -168,38 +168,41 @@ namespace UnicomTICManagementSystem.Controllers
             return null;
         }
 
+        public Student GetStudentByUserId(int userId)
+        {
+            string query = @"SELECT s.*, c.CourseName 
+                FROM Students s 
+                LEFT JOIN Courses c ON s.CourseID = c.CourseID WHERE s.UserID = @userId";
 
-        //public Student GetStudentInfo(int id)
-        //{
-        //    string query = @"
-        //        SELECT st.StudentID, st.Name, st.Address, st.DOB, st.PhoneNumber, 
-        //               st.CourseID, u.Username, u.Role 
-        //        FROM Students st
-        //        JOIN Courses c ON st.CourseID = c.CourseID
-        //        JOIN Users u ON st.UserID = u.UserID 
-        //        WHERE st.UserID = @id"; 
-        //    using (var conn = DBConfig.GetConnection())
-        //    using (var cmd = new SQLiteCommand(query, conn))
-        //    {
-        //        cmd.Parameters.AddWithValue("@id", id);
+            using (var conn = DBConfig.GetConnection())
+            using (var cmd = new SQLiteCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@userId", userId);
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        Student student = new Student
+                        {
+                            StudentID = Convert.ToInt32(reader["StudentID"]),
+                            UserID = Convert.ToInt32(reader["UserID"]),
+                            Name = reader["Name"].ToString(),
+                            Address = reader["Address"].ToString(),
+                            DOB = reader["DOB"].ToString(),
+                            PhoneNumber = reader["PhoneNumber"].ToString(),
+                            CourseID = Convert.ToInt32(reader["CourseID"]),
+                            CourseName = reader["CourseName"].ToString()
+                        };
 
-        //        using (var reader = cmd.ExecuteReader())
-        //        {
-        //            if (reader.Read())
-        //            {
-        //                return new Student
-        //                {
-        //                    StudentID = Convert.ToInt32(reader["StudentID"]),
-        //                    Name = reader["Name"].ToString(),
-        //                    Address = reader["Address"].ToString(),
-        //                    DOB = reader["DOB"].ToString(),
-        //                    PhoneNumber = reader["PhoneNumber"].ToString(),
-        //                    CourseID = Convert.ToInt32(reader["CourseID"]),
-        //                };
-        //            }
-        //        }
-        //    }
-        //    return null;
-        //}
+                        return student;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
+
     }
 }

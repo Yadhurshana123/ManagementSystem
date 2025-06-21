@@ -21,8 +21,16 @@ namespace UnicomTICManagementSystem.Repositories
                         Password TEXT NOT NULL,
                         Email TEXT NOT NULL UNIQUE,
                         Role TEXT NOT NULL,
-                        CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                        UpdatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+                        CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+                    );
+
+                     CREATE TABLE IF NOT EXISTS PendingUsers (
+                        UserID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Username TEXT NOT NULL,
+                        Password TEXT NOT NULL,
+                        Email TEXT NOT NULL UNIQUE,
+                        Role TEXT NOT NULL,
+                        CreatedAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
                     );
 
                     CREATE TABLE IF NOT EXISTS Staffs (
@@ -108,12 +116,14 @@ namespace UnicomTICManagementSystem.Repositories
                         FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID)
                     );
 
-                    CREATE TABLE IF NOT EXISTS Attendances (
+         
+                    CREATE TABLE IF NOT EXISTS Attendances_new (
                         AttendanceID INTEGER PRIMARY KEY AUTOINCREMENT,
                         TimetableID INTEGER NOT NULL,
                         StudentID INTEGER NOT NULL,
                         Status TEXT NOT NULL,
-                        Timestamp DATETIME NOT NULL,
+                        LogIn DATETIME NULL,
+                        LogOut DATETIME NULL,
                         FOREIGN KEY (TimetableID) REFERENCES TimeTables(TimetableID),
                         FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
 
@@ -125,14 +135,6 @@ namespace UnicomTICManagementSystem.Repositories
                         PRIMARY KEY (StudentID, LectureID),
                         FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
                         FOREIGN KEY (LectureID) REFERENCES Lecturers (LectureID)
-                    );
-
-                    CREATE TABLE IF NOT EXISTS StudentTimetable (
-                        StudentID INTEGER NOT NULL,
-                        TimetableID INTEGER NOT NULL,
-                        PRIMARY KEY (StudentID, TimetableID),
-                        FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
-                        FOREIGN KEY (TimetableID) REFERENCES TimeTables(TimetableID)
                     );
 
                     CREATE TABLE IF NOT EXISTS LectureModule (

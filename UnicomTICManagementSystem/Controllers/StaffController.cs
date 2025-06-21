@@ -121,20 +121,14 @@ namespace UnicomTICManagementSystem.Controllers
             return null;
         }
 
-        public Staff GetStaffInfo(int id)
+        public Staff GetStaffByUserID(int userId)
         {
-            string query = @"
-                SELECT s.StaffID, s.Name, s.PhoneNumber, s.Email, s.Address,
-                       u.Username, u.Email, u.Role
-                FROM Staffs s
-                JOIN Users u ON s.UserID = u.UserID
-                WHERE s.UserID = @id"
-            ;
+            string query = "SELECT * FROM Staffs WHERE UserID = @userId";
 
             using (var conn = DBConfig.GetConnection())
             using (var cmd = new SQLiteCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@userId", userId);
                 using (var reader = cmd.ExecuteReader())
                 {
                     if (reader.Read())

@@ -61,7 +61,7 @@ namespace UnicomTICManagementSystem.Views
                     return;
                 }
 
-                if (!radio_btn_present.Checked && !radio_btn_absent.Checked)
+                if (!radio_btn_present.Checked && !radio_btn_absent.Checked && !radio_btn_late.Checked)
                 {
                     MessageBox.Show("Please select a status.");
                     return;
@@ -73,14 +73,18 @@ namespace UnicomTICManagementSystem.Views
                     StudentID = Convert.ToInt32(com_student.SelectedValue),
                     TimetableID = Convert.ToInt32(com_timetable.SelectedValue),
                     Status = radio_btn_present.Checked ? "Present" :
-                                 radio_btn_absent.Checked ? "Absent" : "",
-                    Timestamp = dtp_timestamp.Value,
+                                 radio_btn_absent.Checked ? "Absent" :
+                                 radio_btn_late.Checked ? "Late" : 
+                                 "",
+                    LogIn = radio_btn_absent.Checked ? (DateTime?)null : dtp_login.Value,
+                    LogOut = radio_btn_absent.Checked ? (DateTime?)null : dtp_logout.Value,
+
                 };
 
                 var controller = new AttendanceController();
                 controller.MarkAttendance(attendance);
-
                 MessageBox.Show("Attendance marked successfully!");
+                LoadAttendanceData();
 
             }
             catch (Exception ex) 
@@ -100,17 +104,42 @@ namespace UnicomTICManagementSystem.Views
                     TimetableID = Convert.ToInt32(com_timetable.SelectedValue),
                     StudentID = Convert.ToInt32(com_student.SelectedValue),
                     Status = radio_btn_present.Checked ? "Present" :
-                                 radio_btn_absent.Checked ? "Absent" : "",
-                    Timestamp = dtp_timestamp.Value
-
+                         radio_btn_absent.Checked ? "Absent" :
+                         radio_btn_late.Checked ? "Late" :
+                         "",
+                    LogIn = radio_btn_absent.Checked ? (DateTime?)null : dtp_login.Value,
+                    LogOut = radio_btn_absent.Checked ? (DateTime?)null : dtp_logout.Value,
 
                 };
                 controller.UpdateAttendance(attendance);
-                MessageBox.Show("Attendance updated successfully!");
+                MessageBox.Show("Attendance edited successfully!");
+                LoadAttendanceData();
             }
             catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgv_attendance_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv_attendance.SelectedRows.Count > 0)
+            {
+                var attendance = dgv_attendance.SelectedRows[0].DataBoundItem as Attendance;
+                if (attendance != null)
+                {
+                    selectedAttendanceId = attendance.AttendanceID;
+                    com_timetable.SelectedValue = attendance.TimetableID;
+                    com_student.SelectedValue = attendance.StudentID;
+                    radio_btn_present.Checked = attendance.Status == "Present";
+                    radio_btn_absent.Checked = attendance.Status == "Absent";
+                    radio_btn_late.Checked = attendance.Status == "Late";
+                    //dtp_login.Value = attendance.LogIn;
+                    //dtp_logout.Value = attendance.LogOut;
+                    dtp_login.Value = attendance.LogIn ?? DateTime.Now;
+                    dtp_logout.Value = attendance.LogOut ?? DateTime.Now;
+
+                }
             }
         }
     }

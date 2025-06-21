@@ -51,7 +51,7 @@ namespace UnicomTICManagementSystem.Views
             List<Room> rooms = controller.GetAllRooms();
 
             com_room.DataSource = rooms;
-            com_room.DisplayMember = "RoomName";
+            com_room.DisplayMember = "RoomType";
             com_room.ValueMember = "RoomID";
         }
 
@@ -60,6 +60,11 @@ namespace UnicomTICManagementSystem.Views
             TimetableController controller = new TimetableController();
             var list = controller.GetAllTimetables();
             dgv_timetable.DataSource = list;
+            if(dgv_timetable.Columns["ModuleName"] != null)
+                dgv_timetable.Columns["ModuleName"].Visible = false;
+
+            if (dgv_timetable.Columns["RoomName"] != null)
+                dgv_timetable.Columns["RoomName"].Visible = false;
         }
 
         public void HideAllControlsExceptDataGridView()
@@ -73,32 +78,12 @@ namespace UnicomTICManagementSystem.Views
                 else
                 {
                     ctrl.Visible = true;
-                    //ctrl.Dock = DockStyle.Fill; 
                 }
             }
         }
         private void btn_search_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(t_search.Text, out int id))
-            {
-                TimetableController controller = new TimetableController();
-                Timetable result = controller.SearchTimetable(id);
-
-                if (result != null)
-                {
-                    dgv_timetable.DataSource = new List<Timetable> { result };
-                }
-
-                else
-                {
-                    MessageBox.Show("Record not found!");
-                    ClearInputs();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid Timetable ID");
-            }
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -251,5 +236,28 @@ namespace UnicomTICManagementSystem.Views
 
         }
 
+        private void t_search_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(t_search.Text, out int id))
+            {
+                TimetableController controller = new TimetableController();
+                Timetable result = controller.SearchTimetable(id);
+
+                if (result != null)
+                {
+                    dgv_timetable.DataSource = new List<Timetable> { result };
+                }
+
+                else
+                {
+                    MessageBox.Show("Record not found!");
+                    ClearInputs();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid Timetable ID");
+            }
+        }
     }
 }

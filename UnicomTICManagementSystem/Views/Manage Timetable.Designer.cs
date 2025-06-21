@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_search = new System.Windows.Forms.Button();
             this.t_search = new System.Windows.Forms.TextBox();
             this.dgv_timetable = new System.Windows.Forms.DataGridView();
             this.start_time = new System.Windows.Forms.Label();
@@ -49,29 +48,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_timetable)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_search
-            // 
-            this.btn_search.BackColor = System.Drawing.SystemColors.Info;
-            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(591, 175);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(104, 40);
-            this.btn_search.TabIndex = 0;
-            this.btn_search.Text = "Search";
-            this.btn_search.UseVisualStyleBackColor = false;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
-            // 
             // t_search
             // 
             this.t_search.Location = new System.Drawing.Point(282, 198);
             this.t_search.Name = "t_search";
             this.t_search.Size = new System.Drawing.Size(272, 20);
             this.t_search.TabIndex = 1;
+            this.t_search.TextChanged += new System.EventHandler(this.t_search_TextChanged);
             // 
             // dgv_timetable
             // 
             this.dgv_timetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_timetable.Location = new System.Drawing.Point(88, 231);
+            this.dgv_timetable.Location = new System.Drawing.Point(107, 231);
             this.dgv_timetable.Name = "dgv_timetable";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dgv_timetable.RowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -223,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(730, 536);
             this.Controls.Add(this.dtp_date);
             this.Controls.Add(this.ldate);
             this.Controls.Add(this.dtp_end_time);
@@ -240,7 +228,6 @@
             this.Controls.Add(this.start_time);
             this.Controls.Add(this.dgv_timetable);
             this.Controls.Add(this.t_search);
-            this.Controls.Add(this.btn_search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Manage_timetable";
             this.Text = "Manage Timetable";
@@ -251,8 +238,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox t_search;
         private System.Windows.Forms.DataGridView dgv_timetable;
         private System.Windows.Forms.Label start_time;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tsearch = new System.Windows.Forms.TextBox();
             this.ldob = new System.Windows.Forms.Label();
             this.tnumber = new System.Windows.Forms.TextBox();
@@ -37,7 +37,6 @@
             this.taddress = new System.Windows.Forms.TextBox();
             this.tname = new System.Windows.Forms.TextBox();
             this.lname = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
@@ -58,6 +57,8 @@
             this.tsearch.Name = "tsearch";
             this.tsearch.Size = new System.Drawing.Size(251, 22);
             this.tsearch.TabIndex = 59;
+            this.tsearch.Text = " ";
+            this.tsearch.TextChanged += new System.EventHandler(this.tsearch_TextChanged);
             // 
             // ldob
             // 
@@ -123,17 +124,6 @@
             this.lname.TabIndex = 51;
             this.lname.Text = "Name";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(610, 267);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 34);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // btn_edit
             // 
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,8 +162,8 @@
             this.dgview_students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgview_students.Location = new System.Drawing.Point(91, 305);
             this.dgview_students.Name = "dgview_students";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgview_students.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgview_students.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgview_students.Size = new System.Drawing.Size(502, 206);
             this.dgview_students.TabIndex = 46;
             this.dgview_students.SelectionChanged += new System.EventHandler(this.dgview_students_SelectionChanged);
@@ -255,7 +245,6 @@
             this.Controls.Add(this.taddress);
             this.Controls.Add(this.tname);
             this.Controls.Add(this.lname);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add);
@@ -280,7 +269,6 @@
         private System.Windows.Forms.TextBox taddress;
         private System.Windows.Forms.TextBox tname;
         private System.Windows.Forms.Label lname;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_add;

@@ -16,9 +16,13 @@ namespace UnicomTICManagementSystem.Views
     {
         private int selectedMarkId = -1;
         MarkController markController = new MarkController();
+
         public ManageMarks()
         {
             InitializeComponent();
+            LoadStudentCombo();
+            LoadModulesCombo();
+            LoadMarks();
         }
 
         public void HideAllControlsExceptDataGridView()
@@ -32,7 +36,6 @@ namespace UnicomTICManagementSystem.Views
                 else
                 {
                     ctrl.Visible = true;
-                    //ctrl.Dock = DockStyle.Fill; 
                 }
             }
         }
@@ -40,6 +43,24 @@ namespace UnicomTICManagementSystem.Views
         {
             var list = markController.GetAllMarks();
             dgv_result.DataSource = list;
+        }
+
+        public void LoadStudentCombo() 
+        {
+            StudentController studentController = new StudentController();
+            List<Student> students = studentController.GetAllStudents();
+            com_students.DataSource = students;
+            com_students.DisplayMember = "Name";
+            com_students.ValueMember = "StudentID";
+        }
+
+        public void LoadModulesCombo() 
+        {
+            ExamController examController = new ExamController();   
+            var exams = examController.GetAllExams();
+            com_exam.DataSource = exams;
+            com_exam.DisplayMember = "ExamName";
+            com_exam.ValueMember = "ExamID";
         }
 
         public void ClearInputs() 
@@ -61,6 +82,8 @@ namespace UnicomTICManagementSystem.Views
                 var mark = new Mark
                 {
                     Score = int.Parse(tscore.Text),
+                    ExamID = (int)com_exam.SelectedValue,
+                    StudentID = (int)com_students.SelectedValue,
                     Results = tresult.Text
                 };
 
@@ -88,8 +111,8 @@ namespace UnicomTICManagementSystem.Views
                 var mark = new Mark
                 {
                     MarkID = selectedMarkId,
-                    //StudentID = int.Parse(txtStudentID.Text),
-                    //ExamID = int.Parse(txtExamID.Text),
+                    ExamID = (int)com_exam.SelectedValue,
+                    StudentID = (int)com_students.SelectedValue,
                     Score = int.Parse(tscore.Text),
                     Results = tresult.Text
                 };
@@ -115,12 +138,17 @@ namespace UnicomTICManagementSystem.Views
                 if (mark != null)
                 {
                     selectedMarkId = mark.MarkID;
-                    //txtStudentID.Text = mark.StudentID.ToString();
-                    //txtExamID.Text = mark.ExamID.ToString();
+                    com_students.SelectedValue = mark.StudentID;
+                    com_exam.SelectedValue = mark.ExamID;
                     tscore.Text = mark.Score.ToString();
                     tresult.Text = mark.Results;
                 }
             }
+        }
+
+        private void lbl_module_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

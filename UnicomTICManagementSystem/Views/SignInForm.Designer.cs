@@ -40,7 +40,7 @@
             // 
             this.log_username.AutoSize = true;
             this.log_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log_username.Location = new System.Drawing.Point(117, 64);
+            this.log_username.Location = new System.Drawing.Point(167, 85);
             this.log_username.Name = "log_username";
             this.log_username.Size = new System.Drawing.Size(77, 18);
             this.log_username.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.log_password.AutoSize = true;
             this.log_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log_password.Location = new System.Drawing.Point(119, 122);
+            this.log_password.Location = new System.Drawing.Point(167, 170);
             this.log_password.Name = "log_password";
             this.log_password.Size = new System.Drawing.Size(75, 18);
             this.log_password.TabIndex = 1;
@@ -59,24 +59,25 @@
             // log_tname
             // 
             this.log_tname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log_tname.Location = new System.Drawing.Point(232, 65);
+            this.log_tname.Location = new System.Drawing.Point(325, 85);
+            this.log_tname.Multiline = true;
             this.log_tname.Name = "log_tname";
-            this.log_tname.Size = new System.Drawing.Size(243, 22);
+            this.log_tname.Size = new System.Drawing.Size(243, 32);
             this.log_tname.TabIndex = 2;
             // 
             // log_tpassword
             // 
-            this.log_tpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log_tpassword.Location = new System.Drawing.Point(232, 123);
+            this.log_tpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.log_tpassword.Location = new System.Drawing.Point(325, 170);
             this.log_tpassword.Name = "log_tpassword";
-            this.log_tpassword.Size = new System.Drawing.Size(243, 22);
+            this.log_tpassword.Size = new System.Drawing.Size(243, 26);
             this.log_tpassword.TabIndex = 3;
             // 
             // btn_login
             // 
             this.btn_login.BackColor = System.Drawing.Color.ForestGreen;
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(161, 200);
+            this.btn_login.Location = new System.Drawing.Point(170, 326);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(113, 50);
             this.btn_login.TabIndex = 4;
@@ -87,7 +88,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(364, 200);
+            this.btn_cancel.Location = new System.Drawing.Point(398, 326);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(111, 50);
             this.btn_cancel.TabIndex = 5;
@@ -100,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(773, 554);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.log_tpassword);

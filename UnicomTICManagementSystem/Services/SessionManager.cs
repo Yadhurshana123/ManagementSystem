@@ -8,6 +8,6 @@ namespace UnicomTICManagementSystem.Services
 {
     public static class SessionManager
     {
-        public static int LoggedInUserid { get; set; }
+        public static int LoggedInUserId { get; set; }
     }
 }

@@ -33,28 +33,26 @@ namespace UnicomTICManagementSystem.Controllers
         public List<Timetable> GetAllTimetables()
         {
             var list = new List<Timetable>();
-            using (var conn = DBConfig.GetConnection()) 
+            using (var conn = DBConfig.GetConnection())
             {
-                string query = @"SELECT a.AttendanceID, a.TimetableID, a.StudentID, a.Status, a.Timestamp, s.Name
-                     FROM Attendances a
-                     LEFT JOIN Students s ON a.StudentID = s.StudentID
-                     LEFT JOIN Timetables t ON a.TimetableID = t.TimetableID";
+                string query = @"SELECT TimetableID, ModuleID, Date, StartTime, EndTime, RoomID FROM Timetables";
 
                 using (var cmd = new SQLiteCommand(query, conn))
                 using (var reader = cmd.ExecuteReader())
-
-                while (reader.Read())
                 {
-                    var timetable = new Timetable
+                    while (reader.Read())
                     {
-                        TimetableID = reader.GetInt32(0),
-                        ModuleID = reader.GetInt32(1),
-                        Date = reader.GetString(2),
-                        StartTime = TimeSpan.Parse(reader.GetString(3)),
-                        EndTime = TimeSpan.Parse(reader.GetString(4)),
-                        RoomID = reader.GetInt32(5),
-                    };
-                    list.Add(timetable);
+                        var timetable = new Timetable
+                        {
+                            TimetableID = reader.GetInt32(0),
+                            ModuleID = reader.GetInt32(1),
+                            Date = reader.GetString(2),
+                            StartTime = TimeSpan.Parse(reader.GetString(3)),
+                            EndTime = TimeSpan.Parse(reader.GetString(4)),
+                            RoomID = reader.GetInt32(5),
+                        };
+                        list.Add(timetable);
+                    }
                 }
             }
 
@@ -113,8 +111,8 @@ namespace UnicomTICManagementSystem.Controllers
                             TimetableID = Convert.ToInt32(reader["TimetableID"]),
                             ModuleID = Convert.ToInt32(reader["ModuleID"]),
                             Date = Convert.ToString(reader["Date"]),
-                            StartTime = (TimeSpan)reader["StartTime"],
-                            EndTime = (TimeSpan)reader["EndTime"],
+                            StartTime = DateTime.Parse(Convert.ToString(reader["StartTime"])).TimeOfDay,
+                            EndTime = DateTime.Parse(Convert.ToString(reader["EndTime"])).TimeOfDay,
                             RoomID = Convert.ToInt32(reader["RoomID"]),
                         };
                     }

@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTICManagementSystem.Controllers;
+using UnicomTICManagementSystem.Datas;
 using UnicomTICManagementSystem.Models;
+using UnicomTICManagementSystem.Services;
 
 namespace UnicomTICManagementSystem.Views
 {
@@ -35,7 +37,22 @@ namespace UnicomTICManagementSystem.Views
 
         private void btn_st_details_Click(object sender, EventArgs e)
         {
+            int userId = SessionManager.LoggedInUserId;
+            UserController userController = new UserController();
+            User user = userController.GetUserByUserId(userId);
 
+            StudentController studentController = new StudentController();
+            Student student = studentController.GetStudentByUserId(userId);
+
+            if (user != null)
+            {
+                DetailsForm detailForm = new DetailsForm(user, student, null, null);
+                LoadForm(detailForm);
+            }
+            else
+            {
+                MessageBox.Show("User not found.");
+            }
         }
 
         private void btn_st_timetable_Click(object sender, EventArgs e)
@@ -43,6 +60,8 @@ namespace UnicomTICManagementSystem.Views
             Manage_timetable form = new Manage_timetable();
             form.HideAllControlsExceptDataGridView();
             LoadForm(form);
+
+
         }
 
         private void btn_st_exams_Click(object sender, EventArgs e)
@@ -50,6 +69,31 @@ namespace UnicomTICManagementSystem.Views
             ManageExams manageExams = new ManageExams();
             manageExams.HideAllControlsExceptDataGridView();
             LoadForm(manageExams);
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_previous_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btn_exit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+
+        }
+
+        private void btn_previous_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
     } 
 }

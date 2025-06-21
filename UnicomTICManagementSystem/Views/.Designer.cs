@@ -29,46 +29,38 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_st_result = new System.Windows.Forms.Button();
             this.btn_st_timetable = new System.Windows.Forms.Button();
             this.btn_st_details = new System.Windows.Forms.Button();
             this.btn_st_exams = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_student = new System.Windows.Forms.Label();
             this.student_panel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_previous = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.student_panel.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.btn_st_result);
             this.panel1.Controls.Add(this.btn_st_timetable);
             this.panel1.Controls.Add(this.btn_st_details);
             this.panel1.Controls.Add(this.btn_st_exams);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 450);
+            this.panel1.Size = new System.Drawing.Size(194, 595);
             this.panel1.TabIndex = 0;
-            // 
-            // btn_st_result
-            // 
-            this.btn_st_result.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_st_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_result.Location = new System.Drawing.Point(12, 318);
-            this.btn_st_result.Name = "btn_st_result";
-            this.btn_st_result.Size = new System.Drawing.Size(171, 48);
-            this.btn_st_result.TabIndex = 5;
-            this.btn_st_result.Text = "View Results";
-            this.btn_st_result.UseVisualStyleBackColor = true;
             // 
             // btn_st_timetable
             // 
             this.btn_st_timetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_timetable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_timetable.Location = new System.Drawing.Point(12, 152);
+            this.btn_st_timetable.Location = new System.Drawing.Point(12, 240);
             this.btn_st_timetable.Name = "btn_st_timetable";
             this.btn_st_timetable.Size = new System.Drawing.Size(171, 48);
             this.btn_st_timetable.TabIndex = 4;
@@ -80,7 +72,7 @@
             // 
             this.btn_st_details.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_details.Location = new System.Drawing.Point(12, 68);
+            this.btn_st_details.Location = new System.Drawing.Point(12, 119);
             this.btn_st_details.Name = "btn_st_details";
             this.btn_st_details.Size = new System.Drawing.Size(171, 48);
             this.btn_st_details.TabIndex = 3;
@@ -92,11 +84,11 @@
             // 
             this.btn_st_exams.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_exams.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_exams.Location = new System.Drawing.Point(12, 235);
+            this.btn_st_exams.Location = new System.Drawing.Point(12, 359);
             this.btn_st_exams.Name = "btn_st_exams";
             this.btn_st_exams.Size = new System.Drawing.Size(171, 48);
             this.btn_st_exams.TabIndex = 2;
-            this.btn_st_exams.Text = "Viwe Exams";
+            this.btn_st_exams.Text = "View Exams";
             this.btn_st_exams.UseVisualStyleBackColor = true;
             this.btn_st_exams.Click += new System.EventHandler(this.btn_st_exams_Click);
             // 
@@ -104,9 +96,10 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.lbl_student);
-            this.panel2.Location = new System.Drawing.Point(206, 3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(194, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(589, 50);
+            this.panel2.Size = new System.Drawing.Size(730, 59);
             this.panel2.TabIndex = 1;
             // 
             // lbl_student
@@ -122,16 +115,53 @@
             // student_panel
             // 
             this.student_panel.BackColor = System.Drawing.SystemColors.Window;
-            this.student_panel.Location = new System.Drawing.Point(206, 59);
+            this.student_panel.Controls.Add(this.panel3);
+            this.student_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.student_panel.Location = new System.Drawing.Point(194, 59);
             this.student_panel.Name = "student_panel";
-            this.student_panel.Size = new System.Drawing.Size(589, 379);
+            this.student_panel.Size = new System.Drawing.Size(730, 536);
             this.student_panel.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.Controls.Add(this.btn_previous);
+            this.panel3.Controls.Add(this.btn_exit);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 477);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(730, 59);
+            this.panel3.TabIndex = 0;
+            // 
+            // btn_previous
+            // 
+            this.btn_previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_previous.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_previous.Location = new System.Drawing.Point(470, 6);
+            this.btn_previous.Name = "btn_previous";
+            this.btn_previous.Size = new System.Drawing.Size(111, 41);
+            this.btn_previous.TabIndex = 1;
+            this.btn_previous.Text = "Previous";
+            this.btn_previous.UseVisualStyleBackColor = true;
+            this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click_1);
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Location = new System.Drawing.Point(607, 6);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(111, 41);
+            this.btn_exit.TabIndex = 0;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click_1);
             // 
             // StudentAccessForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(924, 595);
             this.Controls.Add(this.student_panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -141,6 +171,8 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.student_panel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -150,10 +182,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel student_panel;
-        private System.Windows.Forms.Button btn_st_result;
         private System.Windows.Forms.Button btn_st_timetable;
         private System.Windows.Forms.Button btn_st_details;
         private System.Windows.Forms.Button btn_st_exams;
         private System.Windows.Forms.Label lbl_student;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btn_previous;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

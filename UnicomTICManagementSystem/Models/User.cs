@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnicomTICManagementSystem.Models
 {
-    class User
+    public class User
     {
         public int UserID { get; set; }
         public string Username { get; set; }
@@ -14,6 +14,5 @@ namespace UnicomTICManagementSystem.Models
         public string Email { get; set; }
         public string Role { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
     }
 }
