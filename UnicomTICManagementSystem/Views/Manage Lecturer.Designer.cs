@@ -51,11 +51,11 @@
             // dgview_lectures
             // 
             this.dgview_lectures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgview_lectures.Location = new System.Drawing.Point(89, 255);
+            this.dgview_lectures.Location = new System.Drawing.Point(86, 255);
             this.dgview_lectures.Name = "dgview_lectures";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dgview_lectures.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgview_lectures.Size = new System.Drawing.Size(502, 206);
+            this.dgview_lectures.Size = new System.Drawing.Size(622, 206);
             this.dgview_lectures.TabIndex = 27;
             this.dgview_lectures.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgview_lectures_CellContentClick);
             this.dgview_lectures.SelectionChanged += new System.EventHandler(this.dgview_lectures_SelectionChanged);
@@ -118,7 +118,7 @@
             // 
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(623, 340);
+            this.btn_edit.Location = new System.Drawing.Point(381, 467);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(102, 35);
             this.btn_edit.TabIndex = 32;
@@ -130,7 +130,7 @@
             // 
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(623, 401);
+            this.btn_delete.Location = new System.Drawing.Point(583, 467);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(102, 35);
             this.btn_delete.TabIndex = 31;
@@ -142,7 +142,7 @@
             // 
             this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.Location = new System.Drawing.Point(623, 274);
+            this.btn_add.Location = new System.Drawing.Point(165, 467);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(102, 35);
             this.btn_add.TabIndex = 30;

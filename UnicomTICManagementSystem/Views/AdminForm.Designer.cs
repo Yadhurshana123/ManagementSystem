@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_back = new System.Windows.Forms.Button();
+            this.lbl_admin = new System.Windows.Forms.Label();
             this.btn_details = new System.Windows.Forms.Button();
             this.btn_manage_timetable = new System.Windows.Forms.Button();
             this.btn_manage_lecture = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.btn_manage_course = new System.Windows.Forms.Button();
             this.btn_manage_staff = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_admin = new System.Windows.Forms.Label();
             this.mainpanel1 = new System.Windows.Forms.Panel();
             this.timerCheck = new System.Windows.Forms.Timer(this.components);
             this.mainpanel = new System.Windows.Forms.Panel();
@@ -77,7 +77,7 @@
             // 
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.Location = new System.Drawing.Point(12, 513);
+            this.btn_back.Location = new System.Drawing.Point(14, 554);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(181, 35);
             this.btn_back.TabIndex = 11;
@@ -85,11 +85,21 @@
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
+            // lbl_admin
+            // 
+            this.lbl_admin.AutoSize = true;
+            this.lbl_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_admin.Location = new System.Drawing.Point(52, 33);
+            this.lbl_admin.Name = "lbl_admin";
+            this.lbl_admin.Size = new System.Drawing.Size(95, 31);
+            this.lbl_admin.TabIndex = 0;
+            this.lbl_admin.Text = "Admin";
+            // 
             // btn_details
             // 
             this.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_details.Location = new System.Drawing.Point(12, 554);
+            this.btn_details.Location = new System.Drawing.Point(14, 513);
             this.btn_details.Name = "btn_details";
             this.btn_details.Size = new System.Drawing.Size(181, 35);
             this.btn_details.TabIndex = 12;
@@ -226,16 +236,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(837, 54);
             this.panel2.TabIndex = 1;
-            // 
-            // lbl_admin
-            // 
-            this.lbl_admin.AutoSize = true;
-            this.lbl_admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_admin.Location = new System.Drawing.Point(52, 33);
-            this.lbl_admin.Name = "lbl_admin";
-            this.lbl_admin.Size = new System.Drawing.Size(95, 31);
-            this.lbl_admin.TabIndex = 0;
-            this.lbl_admin.Text = "Admin";
             // 
             // mainpanel1
             // 

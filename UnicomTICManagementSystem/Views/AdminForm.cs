@@ -24,7 +24,7 @@ namespace UnicomTICManagementSystem.Views
         {
             InitializeComponent();
             timerCheck.Start();
-            LoadPendingUsers();
+            //LoadPendingUsers();
         }
 
         public void LoadForm(Form formObj)
@@ -39,11 +39,11 @@ namespace UnicomTICManagementSystem.Views
             this.mainpanel.Controls.Add(formObj);
             formObj.Show();
         }
-        public void LoadPendingUsers()
+        /*public void LoadPendingUsers()
         {
             UserController controller = new UserController();
             controller.GetAllPendingUsers();
-        }
+        }*/
 
         private void timerCheck_Tick(object sender, EventArgs e)
         {
@@ -205,8 +205,7 @@ namespace UnicomTICManagementSystem.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*StudentLecturerForm studentLecturerForm = new StudentLecturerForm();
-            LoadForm(studentLecturerForm);*/
+            
         }
     }
 }

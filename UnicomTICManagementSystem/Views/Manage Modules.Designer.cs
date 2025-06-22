@@ -108,11 +108,11 @@
             // dgview_modules
             // 
             this.dgview_modules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgview_modules.Location = new System.Drawing.Point(156, 242);
+            this.dgview_modules.Location = new System.Drawing.Point(196, 257);
             this.dgview_modules.Name = "dgview_modules";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             this.dgview_modules.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgview_modules.Size = new System.Drawing.Size(502, 206);
+            this.dgview_modules.Size = new System.Drawing.Size(461, 206);
             this.dgview_modules.TabIndex = 82;
             this.dgview_modules.SelectionChanged += new System.EventHandler(this.dgview_modules_SelectionChanged);
             // 

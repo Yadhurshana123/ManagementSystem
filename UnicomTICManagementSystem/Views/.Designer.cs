@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_student = new System.Windows.Forms.Label();
             this.btn_st_timetable = new System.Windows.Forms.Button();
             this.btn_st_details = new System.Windows.Forms.Button();
             this.btn_st_exams = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_student = new System.Windows.Forms.Label();
             this.student_panel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_previous = new System.Windows.Forms.Button();
@@ -53,14 +53,24 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 595);
+            this.panel1.Size = new System.Drawing.Size(194, 652);
             this.panel1.TabIndex = 0;
+            // 
+            // lbl_student
+            // 
+            this.lbl_student.AutoSize = true;
+            this.lbl_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_student.Location = new System.Drawing.Point(47, 28);
+            this.lbl_student.Name = "lbl_student";
+            this.lbl_student.Size = new System.Drawing.Size(115, 31);
+            this.lbl_student.TabIndex = 0;
+            this.lbl_student.Text = "Student";
             // 
             // btn_st_timetable
             // 
             this.btn_st_timetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_timetable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_timetable.Location = new System.Drawing.Point(12, 240);
+            this.btn_st_timetable.Location = new System.Drawing.Point(12, 281);
             this.btn_st_timetable.Name = "btn_st_timetable";
             this.btn_st_timetable.Size = new System.Drawing.Size(171, 48);
             this.btn_st_timetable.TabIndex = 4;
@@ -84,7 +94,7 @@
             // 
             this.btn_st_exams.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_exams.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_exams.Location = new System.Drawing.Point(12, 318);
+            this.btn_st_exams.Location = new System.Drawing.Point(12, 404);
             this.btn_st_exams.Name = "btn_st_exams";
             this.btn_st_exams.Size = new System.Drawing.Size(171, 48);
             this.btn_st_exams.TabIndex = 2;
@@ -98,18 +108,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(194, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(730, 59);
+            this.panel2.Size = new System.Drawing.Size(767, 59);
             this.panel2.TabIndex = 1;
-            // 
-            // lbl_student
-            // 
-            this.lbl_student.AutoSize = true;
-            this.lbl_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_student.Location = new System.Drawing.Point(47, 28);
-            this.lbl_student.Name = "lbl_student";
-            this.lbl_student.Size = new System.Drawing.Size(115, 31);
-            this.lbl_student.TabIndex = 0;
-            this.lbl_student.Text = "Student";
             // 
             // student_panel
             // 
@@ -118,7 +118,7 @@
             this.student_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.student_panel.Location = new System.Drawing.Point(194, 59);
             this.student_panel.Name = "student_panel";
-            this.student_panel.Size = new System.Drawing.Size(730, 536);
+            this.student_panel.Size = new System.Drawing.Size(767, 593);
             this.student_panel.TabIndex = 2;
             // 
             // panel3
@@ -127,9 +127,9 @@
             this.panel3.Controls.Add(this.btn_previous);
             this.panel3.Controls.Add(this.btn_exit);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 477);
+            this.panel3.Location = new System.Drawing.Point(0, 534);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(730, 59);
+            this.panel3.Size = new System.Drawing.Size(767, 59);
             this.panel3.TabIndex = 0;
             // 
             // btn_previous
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 595);
+            this.ClientSize = new System.Drawing.Size(961, 652);
             this.Controls.Add(this.student_panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

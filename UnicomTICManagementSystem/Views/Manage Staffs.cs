@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTICManagementSystem.Controllers;
 using UnicomTICManagementSystem.Models;
+using UnicomTICManagementSystem.Services;
 
 namespace UnicomTICManagementSystem.Views
 {
@@ -22,8 +23,8 @@ namespace UnicomTICManagementSystem.Views
             InitializeComponent();
             LoadStaffs();
             LoadUserCombobox();
-
         }
+
         public void LoadUserCombobox()
         {
             UserController userController = new UserController();
@@ -33,7 +34,8 @@ namespace UnicomTICManagementSystem.Views
             username.DisplayMember = "Username";
             username.ValueMember = "UserID";
         }
-            public void LoadStaffs()
+
+        public void LoadStaffs()
         {
             var list = controller.GetAllStaffs();
             dgview_staffs.DataSource = list;
@@ -77,6 +79,15 @@ namespace UnicomTICManagementSystem.Views
                 if (string.IsNullOrWhiteSpace(username.SelectedItem?.ToString()))
                 {
                     MessageBox.Show("Please select a Username.");
+                    return;
+                }
+
+                UserController userController = new UserController();
+                int selectedUserId = (int)username.SelectedValue;
+
+                if (userController.AvoidUserDuplicationByRole(selectedUserId))
+                {
+                    MessageBox.Show("This UserID is already assigned to another role.");
                     return;
                 }
 

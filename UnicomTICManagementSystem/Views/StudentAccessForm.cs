@@ -91,9 +91,9 @@ namespace UnicomTICManagementSystem.Views
 
         private void btn_previous_Click_1(object sender, EventArgs e)
         {
-            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+            this.Hide();
         }
     } 
 }

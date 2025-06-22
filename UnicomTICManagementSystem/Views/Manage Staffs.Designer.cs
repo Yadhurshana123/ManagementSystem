@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tsearch = new System.Windows.Forms.TextBox();
             this.temail = new System.Windows.Forms.TextBox();
             this.lemail = new System.Windows.Forms.Label();
@@ -50,17 +50,19 @@
             // 
             // tsearch
             // 
+            this.tsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsearch.Location = new System.Drawing.Point(310, 239);
             this.tsearch.Name = "tsearch";
-            this.tsearch.Size = new System.Drawing.Size(251, 20);
+            this.tsearch.Size = new System.Drawing.Size(251, 22);
             this.tsearch.TabIndex = 59;
             this.tsearch.TextChanged += new System.EventHandler(this.tsearch_TextChanged);
             // 
             // temail
             // 
+            this.temail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.temail.Location = new System.Drawing.Point(310, 191);
             this.temail.Name = "temail";
-            this.temail.Size = new System.Drawing.Size(251, 20);
+            this.temail.Size = new System.Drawing.Size(251, 22);
             this.temail.TabIndex = 58;
             // 
             // lemail
@@ -75,9 +77,10 @@
             // 
             // tnumber
             // 
+            this.tnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tnumber.Location = new System.Drawing.Point(310, 150);
             this.tnumber.Name = "tnumber";
-            this.tnumber.Size = new System.Drawing.Size(251, 20);
+            this.tnumber.Size = new System.Drawing.Size(251, 22);
             this.tnumber.TabIndex = 56;
             // 
             // lphonenumber
@@ -102,16 +105,18 @@
             // 
             // taddress
             // 
+            this.taddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taddress.Location = new System.Drawing.Point(310, 102);
             this.taddress.Name = "taddress";
-            this.taddress.Size = new System.Drawing.Size(251, 20);
+            this.taddress.Size = new System.Drawing.Size(251, 22);
             this.taddress.TabIndex = 53;
             // 
             // tname
             // 
+            this.tname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tname.Location = new System.Drawing.Point(310, 57);
             this.tname.Name = "tname";
-            this.tname.Size = new System.Drawing.Size(251, 20);
+            this.tname.Size = new System.Drawing.Size(251, 22);
             this.tname.TabIndex = 52;
             // 
             // lname
@@ -129,7 +134,7 @@
             // 
             this.btn_edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(618, 357);
+            this.btn_edit.Location = new System.Drawing.Point(618, 371);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(102, 35);
             this.btn_edit.TabIndex = 49;
@@ -141,7 +146,7 @@
             // 
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.Location = new System.Drawing.Point(618, 434);
+            this.btn_delete.Location = new System.Drawing.Point(618, 455);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(102, 35);
             this.btn_delete.TabIndex = 48;
@@ -166,8 +171,8 @@
             this.dgview_staffs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgview_staffs.Location = new System.Drawing.Point(84, 284);
             this.dgview_staffs.Name = "dgview_staffs";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            this.dgview_staffs.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            this.dgview_staffs.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgview_staffs.Size = new System.Drawing.Size(502, 206);
             this.dgview_staffs.TabIndex = 46;
             this.dgview_staffs.SelectionChanged += new System.EventHandler(this.dgview_staffs_SelectionChanged);
@@ -194,10 +199,11 @@
             // 
             // username
             // 
+            this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username.FormattingEnabled = true;
             this.username.Location = new System.Drawing.Point(310, 12);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(251, 21);
+            this.username.Size = new System.Drawing.Size(251, 24);
             this.username.TabIndex = 62;
             // 
             // Manage_staff

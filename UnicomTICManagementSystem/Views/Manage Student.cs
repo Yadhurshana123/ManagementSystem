@@ -93,7 +93,15 @@ namespace UnicomTICManagementSystem.Views
                     return;
                 }
 
-                int selectedCourseId = com_course.SelectedIndex + 1;
+                UserController userController = new UserController();
+                int selectedUserId = (int)user_name.SelectedValue;
+
+                if (userController.AvoidUserDuplicationByRole(selectedUserId))
+                {
+                    MessageBox.Show("This UserID is already assigned to another role.");
+                    return;
+                }
+
                 var student = new Student
                 {
                     Name = tname.Text,

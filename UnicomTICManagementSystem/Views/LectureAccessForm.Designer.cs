@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_lecturer = new System.Windows.Forms.Label();
             this.btn_lec_exams = new System.Windows.Forms.Button();
             this.btn_lec_shedule = new System.Windows.Forms.Button();
             this.btn_lec_course = new System.Windows.Forms.Button();
             this.btn_lec_timetable = new System.Windows.Forms.Button();
             this.btn_lec_details = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_lecturer = new System.Windows.Forms.Label();
             this.lecturer_panel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_previous = new System.Windows.Forms.Button();
@@ -58,6 +58,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 574);
             this.panel1.TabIndex = 0;
+            // 
+            // lbl_lecturer
+            // 
+            this.lbl_lecturer.AutoSize = true;
+            this.lbl_lecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lecturer.Location = new System.Drawing.Point(32, 23);
+            this.lbl_lecturer.Name = "lbl_lecturer";
+            this.lbl_lecturer.Size = new System.Drawing.Size(122, 31);
+            this.lbl_lecturer.TabIndex = 0;
+            this.lbl_lecturer.Text = "Lecturer";
             // 
             // btn_lec_exams
             // 
@@ -127,16 +137,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(730, 54);
             this.panel2.TabIndex = 1;
-            // 
-            // lbl_lecturer
-            // 
-            this.lbl_lecturer.AutoSize = true;
-            this.lbl_lecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_lecturer.Location = new System.Drawing.Point(41, 9);
-            this.lbl_lecturer.Name = "lbl_lecturer";
-            this.lbl_lecturer.Size = new System.Drawing.Size(122, 31);
-            this.lbl_lecturer.TabIndex = 0;
-            this.lbl_lecturer.Text = "Lecturer";
             // 
             // lecturer_panel
             // 

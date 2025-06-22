@@ -38,8 +38,7 @@ namespace UnicomTICManagementSystem.Views
             foreach (DataGridViewRow row in dg_details.Rows)
             {
                 string field = row.Cells[0].Value?.ToString();
-
-                bool isEditable = field == "Username" || field == "Password";
+                bool isEditable = field == "Password";
 
                 foreach (DataGridViewCell cell in row.Cells)
                 {
@@ -107,11 +106,8 @@ namespace UnicomTICManagementSystem.Views
             }
         }
 
-       
-
         private void btn_update_password_Click(object sender, EventArgs e)
         {
-            string updatedUsername = null;
             string updatedPassword = null;
 
             foreach (DataGridViewRow row in dg_details.Rows)
@@ -119,14 +115,11 @@ namespace UnicomTICManagementSystem.Views
                 string field = row.Cells[0].Value?.ToString();
                 string value = row.Cells[1].Value?.ToString();
 
-                if (field == "Username")
-                    updatedUsername = value;
-
                 if (field == "Password")
                     updatedPassword = value;
             }
 
-            if (!string.IsNullOrWhiteSpace(updatedUsername) && !string.IsNullOrWhiteSpace(updatedPassword))
+            if (!string.IsNullOrWhiteSpace(updatedPassword))
             {
                 string hashedPassword = HashPassword(updatedPassword);
 
@@ -135,15 +128,13 @@ namespace UnicomTICManagementSystem.Views
                     string query = "UPDATE Users SET Username = @username, Password = @password WHERE UserID = @userId";
                     using (var cmd = new SQLiteCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@username", updatedUsername);
                         cmd.Parameters.AddWithValue("@password", hashedPassword);
                         cmd.Parameters.AddWithValue("@userId", _user.UserID);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
                         {
-                            MessageBox.Show("User details updated successfully!");
-                            _user.Username = updatedUsername;
+                            MessageBox.Show("User password updated successfully!");
                             _user.Password = hashedPassword;
                         }
                         else
@@ -155,7 +146,7 @@ namespace UnicomTICManagementSystem.Views
             }
             else
             {
-                MessageBox.Show("Username or Password is empty.");
+                MessageBox.Show("Password is empty.");
             }
 
         }

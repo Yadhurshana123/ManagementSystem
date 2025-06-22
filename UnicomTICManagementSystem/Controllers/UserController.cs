@@ -158,6 +158,24 @@ namespace UnicomTICManagementSystem.Controllers
                 }
             }
         }
+
+        public bool AvoidUserDuplicationByRole(int userid) 
+        {
+            string query = @"
+                   SELECT 'Student' AS Role FROM Students WHERE UserID = @UserID
+                   UNION
+                   SELECT 'Staff' FROM Staffs WHERE UserID = @UserID
+                   UNION
+                   SELECT 'Lecturer' FROM Lecturers WHERE UserID = @UserID";
+
+            using (var conn = DBConfig.GetConnection())
+            using (SQLiteCommand cmd = new SQLiteCommand(query,conn))
+            {
+                cmd.Parameters.AddWithValue("@UserID", userid);
+                var result = cmd.ExecuteScalar(); // first row or column 
+                return result != null;
+            }
+        }
     }
 }
 
