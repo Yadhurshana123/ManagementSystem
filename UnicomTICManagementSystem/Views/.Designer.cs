@@ -35,17 +35,16 @@
             this.btn_st_exams = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.student_panel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_previous = new System.Windows.Forms.Button();
             this.btn_exit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.student_panel.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btn_exit);
+            this.panel1.Controls.Add(this.btn_previous);
             this.panel1.Controls.Add(this.lbl_student);
             this.panel1.Controls.Add(this.btn_st_timetable);
             this.panel1.Controls.Add(this.btn_st_details);
@@ -55,6 +54,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 652);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lbl_student
             // 
@@ -70,7 +70,7 @@
             // 
             this.btn_st_timetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_timetable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_timetable.Location = new System.Drawing.Point(12, 281);
+            this.btn_st_timetable.Location = new System.Drawing.Point(17, 231);
             this.btn_st_timetable.Name = "btn_st_timetable";
             this.btn_st_timetable.Size = new System.Drawing.Size(171, 48);
             this.btn_st_timetable.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             this.btn_st_details.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_details.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_details.Location = new System.Drawing.Point(12, 162);
+            this.btn_st_details.Location = new System.Drawing.Point(17, 142);
             this.btn_st_details.Name = "btn_st_details";
             this.btn_st_details.Size = new System.Drawing.Size(171, 48);
             this.btn_st_details.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             this.btn_st_exams.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_st_exams.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_st_exams.Location = new System.Drawing.Point(12, 404);
+            this.btn_st_exams.Location = new System.Drawing.Point(17, 318);
             this.btn_st_exams.Name = "btn_st_exams";
             this.btn_st_exams.Size = new System.Drawing.Size(171, 48);
             this.btn_st_exams.TabIndex = 2;
@@ -114,31 +114,19 @@
             // student_panel
             // 
             this.student_panel.BackColor = System.Drawing.SystemColors.Window;
-            this.student_panel.Controls.Add(this.panel3);
             this.student_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.student_panel.Location = new System.Drawing.Point(194, 59);
             this.student_panel.Name = "student_panel";
             this.student_panel.Size = new System.Drawing.Size(767, 593);
             this.student_panel.TabIndex = 2;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel3.Controls.Add(this.btn_previous);
-            this.panel3.Controls.Add(this.btn_exit);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 534);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(767, 59);
-            this.panel3.TabIndex = 0;
-            // 
             // btn_previous
             // 
             this.btn_previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_previous.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_previous.Location = new System.Drawing.Point(470, 6);
+            this.btn_previous.Location = new System.Drawing.Point(17, 403);
             this.btn_previous.Name = "btn_previous";
-            this.btn_previous.Size = new System.Drawing.Size(111, 41);
+            this.btn_previous.Size = new System.Drawing.Size(171, 52);
             this.btn_previous.TabIndex = 1;
             this.btn_previous.Text = "Previous";
             this.btn_previous.UseVisualStyleBackColor = true;
@@ -148,9 +136,9 @@
             // 
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.Location = new System.Drawing.Point(607, 6);
+            this.btn_exit.Location = new System.Drawing.Point(17, 488);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(111, 41);
+            this.btn_exit.Size = new System.Drawing.Size(171, 49);
             this.btn_exit.TabIndex = 0;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = true;
@@ -169,8 +157,6 @@
             this.Text = "StudentAccessForm1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.student_panel.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -184,7 +170,6 @@
         private System.Windows.Forms.Button btn_st_details;
         private System.Windows.Forms.Button btn_st_exams;
         private System.Windows.Forms.Label lbl_student;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_previous;
         private System.Windows.Forms.Button btn_exit;
     }

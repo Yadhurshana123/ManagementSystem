@@ -125,7 +125,7 @@ namespace UnicomTICManagementSystem.Views
 
                 using (var conn = DBConfig.GetConnection())
                 {
-                    string query = "UPDATE Users SET Username = @username, Password = @password WHERE UserID = @userId";
+                    string query = "UPDATE Users SET Password = @password WHERE UserID = @userId";
                     using (var cmd = new SQLiteCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@password", hashedPassword);
